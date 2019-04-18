@@ -2,7 +2,7 @@
 Beer Brewery Search Engine🍺
 
 
-#Powered by:
+# Powered by:
 * NodeJs
 * Express
 * ES6
