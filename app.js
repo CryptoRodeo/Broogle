@@ -44,6 +44,7 @@ app.set("view engine", "ejs");
 
 app.use("/", indexRoute);
 
-app.listen(3000, function(){
+//Go to port 3000 or the port set by heroku dynamically
+app.listen( process.env.PORT || 3000, function(){
     console.log("Broogle is up and running");
 });
