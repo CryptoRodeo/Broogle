@@ -2,7 +2,7 @@
   "name": "broogle",
   "version": "1.0.0",
   "engines": {
-		  "node": "10.15.0" 
+    "node": "10.15.0"
   },
   "description": "A google-style web app to search for beer breweries.",
   "main": "app.js",
