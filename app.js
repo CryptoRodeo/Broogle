@@ -8,6 +8,10 @@ flash           = require("connect-flash");
 LocalStrategy   = require("passport-local");
 
 //MongoDB data models
+// Tells express to use the method-override package and what to look for in the URL
+app.use(methodOverride("_method"));
+app.set('view engine', 'ejs');
+app.engine('ejs', require('ejs').__express); //<-- this
 
 
 //Routes to pages
@@ -16,10 +20,6 @@ var indexRoute = require('./routes/index');
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + "/public"));
-
-// Tells express to use the method-override package and what to look for in the URL
-app.use(methodOverride("_method"));
-app.set("view engine", "ejs");
 
 
 /**
