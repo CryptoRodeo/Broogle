@@ -4,7 +4,6 @@ methodOverride = require("method-override"),
 bodyParser      = require("body-parser"),
 mongoose        = require("mongoose"),
 passport        = require("passport"),
-axios			= require('axios'),
 flash           = require("connect-flash");
 LocalStrategy   = require("passport-local");
 
