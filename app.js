@@ -4,7 +4,8 @@ methodOverride = require("method-override"),
 bodyParser      = require("body-parser"),
 mongoose        = require("mongoose"),
 passport        = require("passport"),
-flash           = require("connect-flash");
+flash           = require("connect-flash"),
+ejs 			= require('ejs'),
 LocalStrategy   = require("passport-local");
 
 //MongoDB data models
