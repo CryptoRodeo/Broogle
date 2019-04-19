@@ -8,4 +8,4 @@ A google-like web app that finds breweries in your state.😎
 * NodeJs
 * Express
 * ES6
-* [OpenBreweryDB]{https://www.openbrewerydb.org/}
+* [OpenBreweryDB](https://www.openbrewerydb.org/)
