@@ -1,11 +1,10 @@
-# Broogle
- Beer Brewery Search Engine🍺
+# Broogle (Brew-gle)🍺
 
-A Single Page Application (SPA) that finds breweries in your state.😎
+# A Single Page Application (SPA) that finds breweries in your state.😎
 
-#🚧Warning: Under Construction!🚧
+# 🚧 Warning: Under Construction!🚧
 
-#Future Additions include:
+# Future Additions include:
 * The ability to 'like' and store beer breweries.
 * Different search parameters you can use besides using your state.
 * Dark-mode
