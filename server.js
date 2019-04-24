@@ -8,7 +8,7 @@ ejs 			= require('ejs');
 // Tells express to use the method-override package and what to look for in the URL
 app.use(methodOverride("_method"));
 app.set('view engine', 'ejs');
-app.engine('ejs', require('ejs').__express); //<-- this
+app.engine('ejs', require('ejs').__express); //<-- requires EJS, removes Heroku error.
 
 
 //Routes to pages
