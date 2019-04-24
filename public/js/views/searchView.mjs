@@ -52,6 +52,8 @@ const renderBrewery = brewery =>
 
 
 export const renderResults = (breweries, page = 1, resPerPage = 10) => {
+
+    
     // render results of currente page
     //The starting and ending page.
     const start = (page - 1) * resPerPage;
@@ -68,20 +70,22 @@ export const renderResults = (breweries, page = 1, resPerPage = 10) => {
      *  Take 10 of the recipes from the recipes array, pass them
      *  into the renderRecipe function.
      */
-     document.querySelector('#resultsContainer').style.display = 'block';
+    
+    document.querySelector('#resultsContainer').style.display = 'block';
     breweries.slice(start, end).forEach(renderBrewery);
 
     // render pagination buttons
     //renderButtons(page, recipes.length, resPerPage);
 };
 
+//IIFE that toggles the about-me page
 (function()
 {
     var about = document.querySelector("#aboutLink");
     about.onclick = function()
     {
-        document.querySelector("#overlay").classList.toggle("show");
-        if(document.querySelector("#overlay").classList == 'show')
+        document.querySelector("#aboutOverlay").classList.toggle("show");
+        if(document.querySelector("#aboutOverlay").classList == "overlay show")
         {
             about.textContent='';
             about.insertAdjacentHTML('afterbegin','<i class="far fa-times-circle"></i>');
@@ -91,4 +95,32 @@ export const renderResults = (breweries, page = 1, resPerPage = 10) => {
             about.textContent = 'About';
         }
     }
-})();   
+})();
+
+(function()
+{
+    var about = document.querySelector("#aboutLink");
+    var favButton = document.querySelector('#fav-heart');
+    var closeButton = document.querySelector("#closeLikePage");
+    var resultsContainer = document.querySelector("#resultsContainer");
+    const actionButtons = [ favButton,closeButton ];
+
+    actionButtons.forEach(el => {
+        el.onclick = function()
+        {
+            document.querySelector("#likeOverlay").classList.toggle("show");
+            if(document.querySelector("#likeOverlay").classList == 'overlay show')
+            {
+                about.textContent='';
+                document.querySelector("#resultsContainer").onclick = function()
+                {
+                    alert("i am selected");
+                }
+            }
+            else
+            {
+                about.textContent = 'About';
+                favButton.innerHTML = '<img src="/assets/fav-heart.png">';
+            }
+        }});
+})();

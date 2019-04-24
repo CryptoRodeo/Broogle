@@ -43,7 +43,7 @@ html,body
 
 }
 
-#navigation-bar li#aboutLink
+#navigation-bar li#aboutLink, li#fav-heart
 {
     z-index: 20;
     cursor: pointer;
@@ -287,7 +287,7 @@ div.info-container
     animation: pointerFloat 2s linear infinite;
 }
 
-#overlay
+.overlay
 {
     position:absolute;
     top: 0;
@@ -305,7 +305,12 @@ div.info-container
     display: none;
 }
 
-#overlay.show
+#aboutOverlay.show
+{
+    display: flex;
+}
+
+#likeOverlay.show
 {
     display: flex;
 }
@@ -339,7 +344,7 @@ div.info-container
 .fa-times-circle
 {
     font-size: 24px;
-    color: #fff;    
+    color: #fff;
 }
 
 #aboutContainer a:nth-of-type(1) 
@@ -348,6 +353,49 @@ div.info-container
     margin-top: 80px;
 }
 
+#likedContainer
+{
+}
+
+#likeOverlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;    
+    background-color: #fff;
+    height: 100%;
+    width: 100vw;
+    padding: 20px;  
+    display: none;
+}
+
+#likeOverlay.show
+{
+    display: block;
+    border: solid 1px black;
+}
+
+div#likeOverlay.show::after
+{
+    color: yellow;
+}
+
+#likedImgContainer
+{
+    text-align: center;
+    padding-top: 20px;    
+}
+
+#likedImgContainer img
+{
+    height: 120px;
+}
+
+#closeLikePage
+{
+    cursor: pointer;
+}
 
 footer
 {

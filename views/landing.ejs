@@ -3,11 +3,11 @@
         <nav id="navigation-bar">
             <ul>
                 <li id="aboutLink">About</li>
-                <li id="fav-heart"><a href=""><img src="/assets/fav-heart.png"></a></li>
+                <li id="fav-heart"><img src="/assets/fav-heart.png"></li>
             </ul>
         </nav>
 
-        <div id="overlay">
+        <div class="overlay" id="aboutOverlay">
             <div id="aboutContainer">
                 <h1 class="lightblue">Welcome to Broogle</h1>
                 <h3>Search for breweries in your area</h3>
@@ -15,6 +15,18 @@
                 <h4>Version 1.0</h4>
                 <a href="https://www.openbrewerydb.org/" class="lightblue">Powered by OpenBreweryDB</a>
                 <a href="https://www.github.com/coffeecodecreate" class="lightblue">Built by Bryan Ramos</a>
+            </div>
+        </div>
+
+        <div id="likeOverlay">
+            <div id="likedContainer">
+                <nav id="likedNav">
+                    <h4 class="lightblue" id="closeLikePage">Go back</h4>
+                </nav>
+                <div id="likedImgContainer">
+                    <img src="/assets/liked.png"/>
+                    <h1>Saved Breweries</h1>
+                </div>
             </div>
         </div>
 

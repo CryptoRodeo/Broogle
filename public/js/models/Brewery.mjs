@@ -1,16 +1,16 @@
 import {getById} from '../config';
 
-export default class Recipe
+export default class Brewery
 {
 	constructor(id)
 	{
 		this.id = id;
 	}
 
-	async getBreweries()
+	async getInfo()
 	{
 		try {
-			fetch(`${getById}${this.id}`);
+			fetch(`${getById}${this.id}`)
 			.then(data => data.json())
 			.then(res => 
 				this.name = res.name,
@@ -25,5 +25,6 @@ export default class Recipe
 			// error statements
 			console.log(e);
 		}
+	}
 
 }
