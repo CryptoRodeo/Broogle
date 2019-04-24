@@ -2,11 +2,7 @@ var express     = require('express'),
 app             = express(),
 methodOverride = require("method-override"),
 bodyParser      = require("body-parser"),
-mongoose        = require("mongoose"),
-passport        = require("passport"),
-flash           = require("connect-flash"),
-ejs 			= require('ejs'),
-LocalStrategy   = require("passport-local");
+ejs 			= require('ejs');
 
 //MongoDB data models
 // Tells express to use the method-override package and what to look for in the URL

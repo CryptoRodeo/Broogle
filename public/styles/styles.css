@@ -271,7 +271,7 @@ div.info-container
 
 .loader
 {
-    font-size: 50px;
+    font-size: 30px;
     display: inline-block;
     margin: 50px auto 0;
     color: #33B5E5;
@@ -283,7 +283,7 @@ div.info-container
     margin: 50px auto 0;
     display: inline-block;
     transform: rotateZ(180deg);
-    font-size: 50px;
+    font-size: 30px;
     animation: pointerFloat 2s linear infinite;
 }
 
