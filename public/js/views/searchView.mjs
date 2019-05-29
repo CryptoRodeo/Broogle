@@ -1,5 +1,11 @@
 import {elements} from './base.mjs';
 
+let about = document.querySelector("#aboutLink");
+let favButton = document.querySelector('#fav-heart');
+let closeButton = document.querySelector("#closeLikePage");
+let resultsContainer = document.querySelector("#resultsContainer");
+const actionButtons = [ favButton,closeButton ];
+
 //Returns the value inputted into the search bar.
 export const getInput = () => elements.searchInput.value;
 
@@ -88,23 +94,19 @@ export const renderResults = (breweries, page = 1, resPerPage = 10) => {
         if(document.querySelector("#aboutOverlay").classList == "overlay show")
         {
             about.textContent='';
+            favButton.innerHTML='';
             about.insertAdjacentHTML('afterbegin','<i class="far fa-times-circle"></i>');
         }
         else
         {
             about.textContent = 'About';
+            favButton.innerHTML='<img src="/assets/fav-heart.png">';
         }
     }
 })();
 
 (function()
 {
-    var about = document.querySelector("#aboutLink");
-    var favButton = document.querySelector('#fav-heart');
-    var closeButton = document.querySelector("#closeLikePage");
-    var resultsContainer = document.querySelector("#resultsContainer");
-    const actionButtons = [ favButton,closeButton ];
-
     actionButtons.forEach(el => {
         el.onclick = function()
         {
@@ -112,10 +114,6 @@ export const renderResults = (breweries, page = 1, resPerPage = 10) => {
             if(document.querySelector("#likeOverlay").classList == 'overlay show')
             {
                 about.textContent='';
-                document.querySelector("#resultsContainer").onclick = function()
-                {
-                    alert("i am selected");
-                }
             }
             else
             {
