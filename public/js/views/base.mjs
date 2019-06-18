@@ -4,7 +4,9 @@ export const elements = {
 	searchInput: document.querySelector('#search__field'),
 	searchResults: document.querySelector('#resultsContainer'),
 	searchResultList: document.querySelector("#results-list"),
-    searchResultListElements: document.querySelector("#results-list li")
+    searchResultListElements: document.querySelector("#results-list li"),
+    likedOverlay: document.querySelector("#likeOveray"),
+    saveBrewery: document.querySelectorAll(".save__brewery")
 }
 
 /**

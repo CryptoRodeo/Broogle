@@ -1,6 +1,6 @@
 const states = [
     'Alabama',
-    'Alaska'
+    'Alaska',
     'Arizona',
     'Arkansas',
     'California',
@@ -32,7 +32,7 @@ const states = [
     'New Mexico',
     'New York',
     'North Carolina',
-    'North Dakota'
+    'North Dakota',
     'Ohio',
     'Oklahoma',
     'Oregon',

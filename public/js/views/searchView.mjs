@@ -13,15 +13,19 @@ export const clearResults = () => {
 }
 
 export const highlightSelected = id => {
-	const resultsSelected = Array.from(document.querySelectorAll('.results__link'));
+    const resultsSelected = Array.from(document.querySelectorAll('.save__brewery'));
 	resultsSelected.forEach(el => {
-		el.classList.remove('results__link--active');
+		el.classList.remove('.save__brewery--active');
 	});
 
 	//Select the link with the href attribute holding the ID
     //Then add the class that gives it the selected styles.
 
-	document.querySelector(`.results__link[href=#"${id}"]`).classList.add('results__link--active');
+    document.querySelector(`.save__brewery[href="#${id}"]`).classList.add('save__brewery--active');
+    
+    document.querySelectorAll('.save__brewery--active').forEach( el => {
+        el.style = "color: #eceff1";
+    });
 }
 
 
@@ -32,6 +36,7 @@ export const highlightSelected = id => {
     * The markup will then be inserted into the search results list
     * as the next result 'before end'.
  */
+
 const renderBrewery = brewery =>
 {
 	const markup = `
@@ -41,23 +46,25 @@ const renderBrewery = brewery =>
                         <h1 class="lightblue"><a href="">${brewery.name}</a></h1>
                         <h2>Address: ${brewery.street} ${brewery.city}, ${brewery.state} ${brewery.postal_code}</h2>
                         <h3>Phone#: ${brewery.phone}</h3>
+                        <h3>ID: ${brewery.id}</h3>
                         <h3 class="lightblue"><a href="">Get Directions</a></h3>
-                        <h3 class="lightblue"><a href="">Save</a></h3>
+                        <a class="save__brewery" href="#${brewery.id}">Save</a>
                     </div>
                 </a>
             </li>
-	`
+    `
     elements.searchResultList.insertAdjacentHTML('beforeend', markup);
 }
 
 
-export const renderResults = (breweries, page = 1, resPerPage = 10) => {
+
+export const renderResults = (breweries) => {
 
     
     // render results of currente page
     //The starting and ending page.
-    const start = (page - 1) * resPerPage;
-    const end = page * resPerPage;
+    // const start = (page - 1) * resPerPage;
+    // const end = page * resPerPage;
 
     /**
      * Example:
@@ -72,7 +79,7 @@ export const renderResults = (breweries, page = 1, resPerPage = 10) => {
      */
     
     document.querySelector('#resultsContainer').style.display = 'block';
-    breweries.slice(start, end).forEach(renderBrewery);
+    breweries.slice().forEach(renderBrewery);
 
     // render pagination buttons
     //renderButtons(page, recipes.length, resPerPage);
@@ -122,5 +129,6 @@ export const renderResults = (breweries, page = 1, resPerPage = 10) => {
                 about.textContent = 'About';
                 favButton.innerHTML = '<img src="/assets/fav-heart.png">';
             }
-        }});
+        }
+    })
 })();

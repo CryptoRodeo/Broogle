@@ -1,5 +1,5 @@
 
-import {getByState} from '../config.mjs'
+import {getByState} from '../config.js'
 
 
 export default class Search
