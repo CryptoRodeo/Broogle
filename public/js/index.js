@@ -5,7 +5,11 @@ import { elements, renderLoader, clearLoader, renderPointer, clearPointer } from
 
 //Models
 import Search from './models/Search.mjs';
+<<<<<<< HEAD
 import Likes from './models/Likes.mjs';
+=======
+import List from './models/Search.mjs';
+>>>>>>> 24774003973a96e0a8f51ea20fcb22e741d3f3ea
 import Brewery from './models/Brewery.mjs';
 
 //views
@@ -51,6 +55,7 @@ const controlSearch = async() => {
 	
 }
 
+<<<<<<< HEAD
 /**
  * Brewery controller
  */
@@ -112,6 +117,30 @@ const controlBrewery = async () => {
 	 state.likes.readStorage();	 
  });
 
+=======
+// /**
+//  * LIST Controller
+//  */
+
+//  const controlList = () =>
+//  {
+// 	//create a new list IF there is none.
+// 	 if(!state.list) state.list = new List();
+
+// 	 //Add each brewery to the list and UI
+
+
+
+//  }
+
+
+
+/**
+ * LIKE Controller
+ */
+
+ 
+>>>>>>> 24774003973a96e0a8f51ea20fcb22e741d3f3ea
 
 elements.searchForm.addEventListener('submit', e => {
     e.preventDefault();
