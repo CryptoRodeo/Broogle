@@ -32,7 +32,45 @@ export const toggleLikeMenu = () => {
                 favButton.innerHTML = '<img src="/assets/fav-heart.png">';
             }
         }});
-}
+};
+
+export const renderLike = like => {
+    let markup = `
+			<li>
+                <a class="results__link">
+                    <div class="info-container">
+                        <h1 class="lightblue"><a href="">${like.name}</a></h1>
+                        <h2>Address: ${like.street} ${like.city}, ${like.state} ${like.postal_code}</h2>
+                        <h3>Phone#: ${like.phone}</h3>
+                        <h3 class="lightblue"><a href="">Get Directions</a></h3>
+                        <a class="save__brewery" href="#${like.id}">Save</a>
+                    </div>
+                </a>
+            </li>
+    `;
+    elements.likeList.insertAdjacentHTML('beforeend', markup);
+
+};
+
+// //Toggles the like menu.
+// (function()
+// {
+//     actionButtons.forEach(el => {
+//         el.onclick = function()
+//         {
+//             document.querySelector("#likeOverlay").classList.toggle("show");
+//             if(document.querySelector("#likeOverlay").classList == 'overlay show')
+//             {
+//                 about.textContent='';
+//             }
+//             else
+//             {
+//                 about.textContent = 'About';
+//                 favButton.innerHTML = '<img src="/assets/fav-heart.png">';
+//             }
+//         }
+//     })
+// })();
 
 export const deleteLike = id =>
 {

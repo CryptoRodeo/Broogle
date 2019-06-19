@@ -52,7 +52,6 @@ const renderBrewery = brewery =>
                         <h1 class="lightblue"><a href="">${brewery.name}</a></h1>
                         <h2>Address: ${brewery.street} ${brewery.city}, ${brewery.state} ${brewery.postal_code}</h2>
                         <h3>Phone#: ${brewery.phone}</h3>
-                        <h3>ID: ${brewery.id}</h3>
                         <h3 class="lightblue"><a href="">Get Directions</a></h3>
                         <a class="save__brewery" href="#${brewery.id}">Save</a>
                     </div>
@@ -112,21 +111,21 @@ export const renderResults = (breweries) => {
     }
 })();
 
-(function()
-{
-    actionButtons.forEach(el => {
-        el.onclick = function()
-        {
-            document.querySelector("#likeOverlay").classList.toggle("show");
-            if(document.querySelector("#likeOverlay").classList == 'overlay show')
-            {
-                about.textContent='';
-            }
-            else
-            {
-                about.textContent = 'About';
-                favButton.innerHTML = '<img src="/assets/fav-heart.png">';
-            }
-        }
-    })
-})();
+// (function()
+// {
+//     actionButtons.forEach(el => {
+//         el.onclick = function()
+//         {
+//             document.querySelector("#likeOverlay").classList.toggle("show");
+//             if(document.querySelector("#likeOverlay").classList == 'overlay show')
+//             {
+//                 about.textContent='';
+//             }
+//             else
+//             {
+//                 about.textContent = 'About';
+//                 favButton.innerHTML = '<img src="/assets/fav-heart.png">';
+//             }
+//         }
+//     })
+// })();

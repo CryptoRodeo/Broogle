@@ -11,12 +11,14 @@ export default class Likes
 	addLike(id, breweryName, breweryAddress, breweryPhoneNum)
 	{
 		//Holds all data attributes of the brewery
-		const likedBrewery = { id, breweryName, breweryAddress, breweryPhoneNum };
+		const like = { id, breweryName, breweryAddress, breweryPhoneNum };
 		//Stores it in the liked array
-		this.likes.push(likedBrewery);
+		this.likes.push(like);
 
 		//persist data in local storage
 		this.persistData();
+
+		return like;
 	}
 
 	deleteLike(id)

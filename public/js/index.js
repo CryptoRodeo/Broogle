@@ -5,16 +5,16 @@ import { elements, renderLoader, clearLoader, renderPointer, clearPointer } from
 
 //Models
 import Search from './models/Search.mjs';
-<<<<<<< HEAD
 import Likes from './models/Likes.mjs';
-=======
-import List from './models/Search.mjs';
->>>>>>> 24774003973a96e0a8f51ea20fcb22e741d3f3ea
+
 import Brewery from './models/Brewery.mjs';
 
 //views
 import * as searchView from './views/searchView.mjs';
 import * as likesView from './views/likesView.mjs';
+
+// likesView.toggleLikeMenu();
+// likesView.renderLike();
 
 
 const state = {};
@@ -42,8 +42,6 @@ const controlSearch = async() => {
 			clearLoader();
 
 			renderPointer(elements.parentSearchContainer);
-
-			console.log(state.search.result);
 			searchView.renderResults(state.search.result);
 			//If promise returned:
 		} catch(e) {
@@ -55,12 +53,10 @@ const controlSearch = async() => {
 	
 }
 
-<<<<<<< HEAD
 /**
  * Brewery controller
  */
 const controlBrewery = async () => {
-	localStorage.clear();
 	const id = window.location.hash.replace('#','');
 	
 	if (id)
@@ -68,8 +64,8 @@ const controlBrewery = async () => {
 		if(state.search) searchView.highlightSelected(id);
 		state.brewery = new Brewery(id);
 
+		console.log(state);
 		
-
 		try
 		{
 			await state.brewery.getInfo();
@@ -90,13 +86,13 @@ const controlBrewery = async () => {
  * Like Controller
  */
 
- const controlLike = () =>
- {
+ const controlLike = () => {
 	 if(!state.likes) state.likes = new Likes();
 
 	 //Store the current ID focused.
 	 const currentID = state.brewery.id;
 
+	 //User has not likes current brewery, but is liking it now.
 	 if(!state.likes.isLiked(currentID))
 	 {
 
@@ -109,15 +105,26 @@ const controlBrewery = async () => {
 			 state.brewery.info.phone
 		 );
 
+
+		//  //Add like to the like page:
+		//  likesView.renderLike(newLike);
+
 	 }
  }
 
  window.addEventListener('load', () => {
 	 state.likes = new Likes();
 	 state.likes.readStorage();	 
+
+	 //Toggle the like menu
+	 likesView.toggleLikeMenu();
+
+	 state.likes.likes.forEach(el => {
+		 likesView.renderLike(el);
+	 });
  });
 
-=======
+
 // /**
 //  * LIST Controller
 //  */
@@ -140,7 +147,6 @@ const controlBrewery = async () => {
  */
 
  
->>>>>>> 24774003973a96e0a8f51ea20fcb22e741d3f3ea
 
 elements.searchForm.addEventListener('submit', e => {
     e.preventDefault();
