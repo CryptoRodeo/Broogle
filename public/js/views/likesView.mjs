@@ -40,7 +40,7 @@ export const renderLike = like => {
                 <a class="results__link">
                     <div class="info-container">
                         <h1 class="lightblue"><a href="">${like.name}</a></h1>
-                        <h2>Address: ${like.street} ${like.city}, ${like.state} ${like.postal_code}</h2>
+                        <h2>Address: ${like.address}</h2>
                         <h3>Phone#: ${like.phone}</h3>
                         <h3 class="lightblue"><a href="">Get Directions</a></h3>
                         <a class="save__brewery" href="#${like.id}">Save</a>

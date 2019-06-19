@@ -8,10 +8,10 @@ export default class Likes
 
 	//Class methods
 
-	addLike(id, breweryName, breweryAddress, breweryPhoneNum)
+	addLike(id, name, address, phone)
 	{
 		//Holds all data attributes of the brewery
-		const like = { id, breweryName, breweryAddress, breweryPhoneNum };
+		const like = { id, name, address, phone };
 		//Stores it in the liked array
 		this.likes.push(like);
 
