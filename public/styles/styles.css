@@ -353,10 +353,6 @@ div.info-container
     margin-top: 80px;
 }
 
-#likedContainer
-{
-}
-
 #likeOverlay
 {
     position: absolute;
@@ -364,16 +360,35 @@ div.info-container
     left: 0;
     z-index: 20;    
     background-color: #fff;
-    height: 100%;
+    min-height: 100vh;
     width: 100vw;
     padding: 20px;  
     display: none;
 }
 
+#likeOverlay::after
+{
+    height: 100vh;
+    content: "";
+}
+
 #likeOverlay.show
 {
-    display: block;
-    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px red;
+}
+
+ul#likeList
+{
+    list-style: none;
+}
+
+li.likedElement
+{
+    margin-top: 20px;
 }
 
 div#likeOverlay.show::after

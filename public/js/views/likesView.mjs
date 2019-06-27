@@ -1,5 +1,4 @@
-import { elements } from './base.mjs';
-
+import { elements, clearLoader } from './base.mjs';
 
 
 //Toggle the 'save' button 
@@ -14,20 +13,24 @@ export const toggleLikeMenu = () => {
     var resultsContainer = document.querySelector("#resultsContainer");
     const actionButtons = [ favButton,closeButton ];
 
+
     actionButtons.forEach(el => {
         el.onclick = function()
         {
+            if(document.querySelector('.pointer'))
+            {
+                document.querySelector('.pointer').style.display="none";
+            }
             document.querySelector("#likeOverlay").classList.toggle("show");
             if(document.querySelector("#likeOverlay").classList == 'overlay show')
             {
                 about.textContent='';
-                document.querySelector("#resultsContainer").onclick = function()
-                {
-                    alert("i am selected");
-                }
+                resultsContainer.style.display="none";
+                
             }
             else
             {
+                resultsContainer.style='display: none';
                 about.textContent = 'About';
                 favButton.innerHTML = '<img src="/assets/fav-heart.png">';
             }
@@ -36,7 +39,7 @@ export const toggleLikeMenu = () => {
 
 export const renderLike = like => {
     let markup = `
-			<li>
+			<li class="likedElement">
                 <a class="results__link">
                     <div class="info-container">
                         <h1 class="lightblue"><a href="">${like.name}</a></h1>

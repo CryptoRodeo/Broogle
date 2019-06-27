@@ -7,7 +7,8 @@ export const elements = {
     searchResultListElements: document.querySelector("#results-list li"),
     likedOverlay: document.querySelector("#likeOveray"),
     likeList: document.querySelector("#likeList"),
-    saveBrewery: document.querySelectorAll(".save__brewery")
+    saveBrewery: document.querySelectorAll(".save__brewery"),
+    pointer: document.querySelector('.pointer')
 }
 
 /**

@@ -92,7 +92,7 @@ const controlBrewery = async () => {
 	 //Store the current ID focused.
 	 const currentID = state.brewery.id;
 
-	 //User has not likes current brewery, but is liking it now.
+	 //User has not liked current brewery, but is liking it now.
 	 if(!state.likes.isLiked(currentID))
 	 {
 
@@ -106,11 +106,11 @@ const controlBrewery = async () => {
 		 );
 
 
-		//  //Add like to the like page:
-		//  likesView.renderLike(newLike);
-
-	 }
- }
+		//Add like to the like page:
+		likesView.renderLike(newLike);
+	}
+	likesView.toggleLikeMenu();
+};
 
  window.addEventListener('load', () => {
 	 state.likes = new Likes();
@@ -149,6 +149,6 @@ const controlBrewery = async () => {
  
 
 elements.searchForm.addEventListener('submit', e => {
-    e.preventDefault();
+    e.preventDefault(); //prevents page from refreshing.
     controlSearch();
 });
