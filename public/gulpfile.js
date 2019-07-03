@@ -14,7 +14,8 @@ let gulp = require('gulp'),
  imagemin   = require('gulp-imagemin'),
  autoprefix = require('gulp-autoprefixer'),
  concat     = require('gulp-concat'),
- cssMin     = require('gulp-minify-css');
+ cssMin     = require('gulp-minify-css'),
+ terser      = require('gulp-terser');
 
  function done()
  {
@@ -41,7 +42,37 @@ function styles(done){
     done();
 };
 
+function uglifyScripts(done)
+{
+    let scriptSrc = './src/scripts/*.js';
+    let scriptDest = './build/scripts/';
 
-gulp.task('default',gulp.series(minimizeImages, styles));
+    gulp.src([scriptSrc])
+    .pipe(concat('script.js'))
+    .pipe(terser())
+    .pipe(gulp.dest(scriptDest));
+    done();
+}
+
+// function syncBrowser(done)
+// {
+//     browserSync.init({
+//         server:{
+//             baseDir:"public"
+//         },
+//     });
+
+//     browserSync.reload(({stream:true}));
+// }
+
+/**
+ * Tasks can be called individually
+ */
+gulp.task("css-min", minimizeImages);
+gulp.task("styles", styles);
+
+
+//Or they can be caled in a series
+gulp.task('default',gulp.series(minimizeImages, styles, uglifyScripts));
 
 //  exports.default = defaultTask
