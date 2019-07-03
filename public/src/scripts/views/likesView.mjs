@@ -32,7 +32,7 @@ export const toggleLikeMenu = () => {
             {
                 resultsContainer.style='display: none';
                 about.textContent = 'About';
-                favButton.innerHTML = '<img src="/assets/fav-heart.png">';
+                favButton.innerHTML = '<img src="./src/images/fav-heart.png">';
             }
         }});
 };
