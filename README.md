@@ -6,13 +6,14 @@
 ##(V1) is now complete!
 
 ## Future Additions include:
-* The ability to 'like' and store beer breweries.
+* ~~The ability to 'like' and store beer breweries.~~ Done.
 * Different search parameters you can use besides using your state.
 * Dark-mode
 * Mobile-friendly version
 
 ## Powered by:
 * NodeJs
+* Gulp.js
 * Express
 * ES6
 * [OpenBreweryDB](https://www.openbrewerydb.org/)
