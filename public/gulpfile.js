@@ -10,12 +10,20 @@
  * gulp-minify-css - minifies the CSS file for faster rendering.
  */
 
-let gulp = require('gulp'),
+const gulp = require('gulp'),
  imagemin   = require('gulp-imagemin'),
  autoprefix = require('gulp-autoprefixer'),
  concat     = require('gulp-concat'),
  cssMin     = require('gulp-minify-css'),
- terser      = require('gulp-terser');
+ postCSS    = require('gulp-postcss'),
+ cssImport  = require('postcss-import'),
+ cssVars    = require('postcss-simple-vars');
+
+//Postcss plugins
+const plugins = [
+    cssImport,
+    cssVars
+];
 
  function done()
  {
@@ -24,10 +32,10 @@ let gulp = require('gulp'),
  }
  
 function minimizeImages(done){
-    var img_src = './src/images/**/*', img_dest = './build/images';
+    var img_src = './src/images/*', img_dest = './build/images/';
 	gulp.src(img_src)
-		.pipe(imagemin())
-        .pipe(gulp.dest(img_dest))
+	.pipe(imagemin())
+    .pipe(gulp.dest(img_dest))
     done();
  };
 
@@ -35,23 +43,14 @@ function styles(done){
     let cssDir = './src/styles/*.css';
     let cssBuildDir = './build/styles/';
     gulp.src([cssDir])
+    .pipe(postCSS(plugins))
     .pipe(concat('styles.css'))
     .pipe(autoprefix('last 2 versions'))
     .pipe(cssMin())
-    .pipe(gulp.dest(cssBuildDir));
+    .pipe(gulp.dest(cssBuildDir))
     done();
 };
 
-// function syncBrowser(done)
-// {
-//     browserSync.init({
-//         server:{
-//             baseDir:"public"
-//         },
-//     });
-
-//     browserSync.reload(({stream:true}));
-// }
 
 /**
  * Tasks can be called individually
@@ -61,6 +60,6 @@ gulp.task("styles", styles);
 
 
 //Or they can be caled in a series
-gulp.task('default',gulp.series(minimizeImages, styles));
+gulp.task('default',gulp.series(styles));
 
-//  exports.default = defaultTask
+// exports.default = defaultTask
