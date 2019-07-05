@@ -16,8 +16,6 @@ import * as likesView from './views/likesView.mjs';
 // likesView.toggleLikeMenu();
 // likesView.renderLike();
 
-localStorage.clear();
-
 
 const state = {};
 
