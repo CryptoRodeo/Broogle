@@ -37,12 +37,6 @@ export const toggleLikeMenu = () => {
         }});
 };
 
-// export const highlightDeleteButton = () => {    
-//     document.querySelectorAll('.delete__brewery').forEach( el => {
-//         el.style = "color: #ff4444";
-//     });
-// }
-
 export const renderLike = like => {
     
     let markup = `

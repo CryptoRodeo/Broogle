@@ -1,3 +1,6 @@
+@import 'colors.css';
+
+
 #landingContainer
 {
     height: 100vh;
@@ -12,8 +15,7 @@
 {
     text-decoration: none;
     font-size: 18px;
-    color: #2E3238;
-
+    color: $darkGrey;
 }
 
 #navigation-bar li#aboutLink, li#fav-heart
@@ -82,17 +84,17 @@ form#searchForm
     padding: 0;
     border: none;   
     border-radius: 10px;
-    border: solid 1px #2E3238;
+    border: solid 1px $darkGrey;
     height: 51px;
     width: 100%;
     padding: 0 30px;
     font-size: 16px;
-    color: #918EA8;
+    color: $inputGrey;
 }
 
 #searchForm input:focus {
     outline:none;
-    border: solid 1px #33B5E5;
+    border: solid 1px $darkerBlue;
 }
 
 #searchForm button
@@ -103,20 +105,20 @@ form#searchForm
     bottom: 0;
     right: 0;
     border-top-right-radius: 10px;
-    border-right-color: #2E3238;
+    border-right-color: $darkGrey;
     border-bottom-right-radius: 10px;
     border-left: none;
-    border: solid 1px #2E3238;
-    background-color: #fff;
-    color: #2E3238;
+    border: solid 1px $darkGrey;
+    background-color: $whiteBackground;
+    color: $darkGrey;
     width: 70px;
 }
 
 #searchForm button:hover
 {
-    background-color: #33B5E5;
-    border: solid 1px #33B5E5;
-    color: #fff;
+    background-color: $darkerBlue;
+    border: solid 1px $darkerBlue;
+    color: $whiteBackground;
 }
 #searchForm button img
 {

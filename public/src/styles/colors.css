@@ -1,6 +1,7 @@
-$whiteBackground: '#ffffff';
-$darkGrey: '#2E3238';
-$lightBlue: '#0099CC';
-$darkerBlue: '#33B5E5';
-$lightGrey: '#eceff1';
+$whiteBackground: #ffffff;
+$darkGrey: #2E3238;
+$lightBlue: #0099CC;
+$darkerBlue: #33B5E5;
+$lightGrey: #eceff1;
+$inputGrey: #918EA8;
 $overlay: rgba(0,0,0,0.4);

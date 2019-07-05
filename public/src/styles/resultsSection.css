@@ -1,3 +1,5 @@
+@import 'colors.css';
+
 #resultsContainer
 {
     margin-top: -50px;
@@ -13,7 +15,7 @@
 {
     margin-top: 20px;
     height: inherit;
-    background-color: #eceff1;
+    background-color: $lightGrey;
 }
 
 #results-list li
@@ -35,7 +37,7 @@ ul#results-list
     padding: 20px;
     display: flex;
     flex-direction: column;
-    background-color: #eceff1;
+    background-color: $lightGrey;
     margin-bottom: 0;
 }
 
@@ -59,7 +61,7 @@ ul#results-list
     padding: 0;
     margin: 0;
     text-decoration: none !important;  
-    color: #0099CC;
+    color: $lightBlue;
 }
 
 
@@ -68,7 +70,7 @@ div.info-container
     padding: 40px;
     width: 600px;
     padding-bottom: 40px;
-    background-color: #fff;
+    background-color: $whiteBackground;
     -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
@@ -102,7 +104,7 @@ div.info-container
     font-size: 30px;
     display: inline-block;
     margin: 50px auto 0;
-    color: #33B5E5;
+    color: $darkerBlue;
     animation: loaderRotate 1s linear infinite;
 }
 
@@ -123,7 +125,7 @@ div.info-container
     bottom: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0,0,0,0.4);
+    background-color: $overlay;
     z-index: 1;
     display: flex;
     justify-content: center;
