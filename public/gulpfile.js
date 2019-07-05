@@ -42,18 +42,6 @@ function styles(done){
     done();
 };
 
-function uglifyScripts(done)
-{
-    let scriptSrc = './src/scripts/*.js';
-    let scriptDest = './build/scripts/';
-
-    gulp.src([scriptSrc])
-    .pipe(concat('script.js'))
-    .pipe(terser())
-    .pipe(gulp.dest(scriptDest));
-    done();
-}
-
 // function syncBrowser(done)
 // {
 //     browserSync.init({
@@ -73,6 +61,6 @@ gulp.task("styles", styles);
 
 
 //Or they can be caled in a series
-gulp.task('default',gulp.series(minimizeImages, styles, uglifyScripts));
+gulp.task('default',gulp.series(minimizeImages, styles));
 
 //  exports.default = defaultTask

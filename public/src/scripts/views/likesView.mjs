@@ -37,46 +37,36 @@ export const toggleLikeMenu = () => {
         }});
 };
 
+// export const highlightDeleteButton = () => {    
+//     document.querySelectorAll('.delete__brewery').forEach( el => {
+//         el.style = "color: #ff4444";
+//     });
+// }
+
 export const renderLike = like => {
+    
     let markup = `
 			<li class="likedElement">
-                <a class="results__link">
+                <a class="likes__link" href="#${like.id}">
                     <div class="info-container">
-                        <h1 class="lightblue"><a href="">${like.name}</a></h1>
+                        <h1 class="lightblue"><a href="" class="lightblue">${like.name}</a></h1>
                         <h2>Address: ${like.address}</h2>
                         <h3>Phone#: ${like.phone}</h3>
-                        <h3 class="lightblue"><a href="">Get Directions</a></h3>
-                        <a class="save__brewery" href="#${like.id}">Save</a>
+                        <h3 class="lightblue"><a href=""class="lightblue">Get Directions</a></h3>
+                        <a class="delete__brewery" id="brewery__${like.id}" style="color: #ff4444" href="#${like.id}">Delete</a>
                     </div>
                 </a>
             </li>
     `;
+    //Remove hash from URL
+    history.replaceState(null,null,' ');
     elements.likeList.insertAdjacentHTML('beforeend', markup);
 
 };
 
-// //Toggles the like menu.
-// (function()
-// {
-//     actionButtons.forEach(el => {
-//         el.onclick = function()
-//         {
-//             document.querySelector("#likeOverlay").classList.toggle("show");
-//             if(document.querySelector("#likeOverlay").classList == 'overlay show')
-//             {
-//                 about.textContent='';
-//             }
-//             else
-//             {
-//                 about.textContent = 'About';
-//                 favButton.innerHTML = '<img src="/assets/fav-heart.png">';
-//             }
-//         }
-//     })
-// })();
-
 export const deleteLike = id =>
 {
-    //grab child element from parent.
-    // const el = document.querySelector('')
+    // grab child element from parent.
+    const el = document.querySelector(`#brewery__${id}`);
+    if(el) el.parentNode.remove();
 }

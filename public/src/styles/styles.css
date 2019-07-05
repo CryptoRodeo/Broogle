@@ -19,10 +19,15 @@ html,body
     height: 100vh;  
 }
 
-.lightblue
+.lightblue,.lightblue:link,.lightblue:active
 {
     color: #0099CC;
     font-weight: bold;
+}
+
+a.delete__brewery
+{
+    color: #ff4444'
 }
 
 #landingContainer

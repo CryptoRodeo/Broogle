@@ -28,6 +28,9 @@ export default class Likes
 
 		//Removes the element matching the index and ONLY that element
 		this.likes.splice(index,1);
+
+		//persist daya in localStorage
+		this.persistData();
 	}
 
 	//Tests to see if the element is already liked
@@ -59,4 +62,4 @@ export default class Likes
 		if (storage) this.likes = storage;
 	}
 	
-}
+};
