@@ -106,7 +106,7 @@ export const renderResults = (breweries) => {
         else
         {
             about.textContent = 'About';
-            favButton.innerHTML='<img src="/assets/fav-heart.png">';
+            favButton.innerHTML='<img src="/build/images/fav-heart.png">';
         }
     }
 })();
