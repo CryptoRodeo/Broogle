@@ -1,3 +1,4 @@
+/*LIGHT MODE*/
 $whiteBackground: #ffffff;
 $darkGrey: #2E3238;
 $lightBlue: #0099CC;
@@ -5,3 +6,24 @@ $darkerBlue: #33B5E5;
 $lightGrey: #eceff1;
 $inputGrey: #918EA8;
 $overlay: rgba(0,0,0,0.4);
+
+
+/*DARK MODE*/
+$whiteText: #ffffff;
+$darkBackground: #2E3238;
+$darkResultsList: #918EA8;
+
+/*Personal Notes
+
+Elements in need of change for dark mode:
+html: change background color and color.
+
+search form button: change background color and color.
+
+resultsContainer: change color.
+
+results-list: change background color to darkResultsList, change color.
+
+info-container: change background color and color.
+
+*/
