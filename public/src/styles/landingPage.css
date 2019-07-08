@@ -18,6 +18,11 @@
     color: $darkGrey;
 }
 
+i.fas.fa-cog
+{
+    font-size: 20px;
+}
+
 #navigation-bar li#aboutLink, li#fav-heart
 {
     z-index: 20;
