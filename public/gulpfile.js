@@ -17,20 +17,17 @@ const gulp = require('gulp'),
  cssMin     = require('gulp-minify-css'),
  postCSS    = require('gulp-postcss'),
  cssImport  = require('postcss-import'),
- cssVars    = require('postcss-simple-vars');
+ cssVars    = require('postcss-simple-vars'),
+ watch  = require('gulp-watch');
 
 //Postcss plugins
 const plugins = [
     cssImport,
     cssVars
 ];
+const cssDir = './src/styles/*.css';
+const buildDir = './build/styles/';
 
- function done()
- {
-    console.log("Task complete");
-    return;
- }
- 
 function minimizeImages(done){
     var img_src = './src/images/*', img_dest = './build/images/';
 	gulp.src(img_src)
@@ -39,7 +36,7 @@ function minimizeImages(done){
     done();
  };
 
-function styles(done){
+function styles(cb){
     let cssDir = './src/styles/*.css';
     let cssBuildDir = './build/styles/';
     gulp.src([cssDir])
@@ -48,9 +45,9 @@ function styles(done){
     .pipe(autoprefix('last 2 versions'))
     .pipe(cssMin())
     .pipe(gulp.dest(cssBuildDir))
-    done();
+    cb();
 };
-
+exports.styles = styles;
 
 /**
  * Tasks can be called individually
@@ -58,8 +55,6 @@ function styles(done){
 gulp.task("css-min", minimizeImages);
 gulp.task("styles", styles);
 
-
-//Or they can be caled in a series
-gulp.task('default',gulp.series(styles));
-
-// exports.default = defaultTask
+exports.default = () => {
+    gulp.watch(cssDir, styles);
+};
