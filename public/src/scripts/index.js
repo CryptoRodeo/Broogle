@@ -13,6 +13,9 @@ import Brewery from './models/Brewery.mjs';
 import * as searchView from './views/searchView.mjs';
 import * as likesView from './views/likesView.mjs';
 
+//Change from light to dark theme.
+import {alternateMode} from './views/changeMode.mjs';
+
 // likesView.toggleLikeMenu();
 // likesView.renderLike();
 
@@ -148,7 +151,10 @@ elements.searchForm.addEventListener('submit', e => {
     controlSearch();
 });
 
-if(document.querySelector('.delete__brewery'))
-{
-	document.querySelector('.delete__brewery').addEventListener('click', console.log("Hello!"));
-}
+// if(document.querySelector('.delete__brewery'))
+// {
+// 	document.querySelector('.delete__brewery').addEventListener('click', console.log("Hello!"));
+// }
+
+
+alternateMode();
