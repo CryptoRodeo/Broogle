@@ -1,15 +1,5 @@
-Tasks for the next Broogle update.
+Refactor some of the methods used for dark mode
 
-Add --dark-mode class to elements for a default darkmode style
+begin styling of liked page
 
-Add --dark-mode-[insert-element] to any elements needing any extra styling
-
-Add these classes to their respective .css modules.
-
-Edit the script that handles these events, toggle the respective elements with the dark mode class
-
-merge to origin
-
-delete darkMode branch
-
-push
+see what else needs to be styled.
