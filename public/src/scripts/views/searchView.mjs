@@ -1,10 +1,13 @@
 import {elements} from './base.mjs';
+import {alternateMode, triggerStyles, isDark} from './changeMode.mjs';
 
 let about = document.querySelector("#aboutLink");
 let favButton = document.querySelector('#fav-heart');
 let closeButton = document.querySelector("#closeLikePage");
 let resultsContainer = document.querySelector("#resultsContainer");
 const actionButtons = [ favButton,closeButton ];
+
+
 
 //Returns the value inputted into the search bar.
 export const getInput = () => elements.searchInput.value;
@@ -48,7 +51,7 @@ const renderBrewery = brewery =>
 	const markup = `
 			<li>
                 <a class="results__link">
-                    <div class="info-container">
+                    <div class="info-container ${isDark()}">
                         <h1 class="lightblue"><a href="">${brewery.name}</a></h1>
                         <h2>Address: ${brewery.street} ${brewery.city}, ${brewery.state} ${brewery.postal_code}</h2>
                         <h3>Phone#: ${brewery.phone}</h3>
@@ -111,6 +114,7 @@ export const renderResults = (breweries) => {
     }
 })();
 
+alternateMode();
 // (function()
 // {
 //     actionButtons.forEach(el => {

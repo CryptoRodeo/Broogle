@@ -13,8 +13,11 @@ import Brewery from './models/Brewery.mjs';
 import * as searchView from './views/searchView.mjs';
 import * as likesView from './views/likesView.mjs';
 
+
 //Change from light to dark theme.
 import {alternateMode} from './views/changeMode.mjs';
+//Used for light/dark mode.
+alternateMode();
 
 // likesView.toggleLikeMenu();
 // likesView.renderLike();
@@ -155,6 +158,3 @@ elements.searchForm.addEventListener('submit', e => {
 // {
 // 	document.querySelector('.delete__brewery').addEventListener('click', console.log("Hello!"));
 // }
-
-
-alternateMode();
