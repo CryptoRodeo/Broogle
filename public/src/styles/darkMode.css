@@ -1,0 +1,7 @@
+@import 'colors.css';
+
+.--dark-mode
+{
+    background-color: $darkBackground;
+    color: $whiteText;
+}

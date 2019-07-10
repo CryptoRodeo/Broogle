@@ -91,7 +91,7 @@ export const renderResults = (breweries) => {
 };
 
 //IIFE that toggles the about-me page
-(function()
+(() =>
 {
     var about = document.querySelector("#aboutLink");
     about.onclick = function()
