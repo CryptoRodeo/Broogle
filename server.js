@@ -2,11 +2,22 @@ var express     = require('express'),
 app             = express(),
 methodOverride = require("method-override"),
 bodyParser      = require("body-parser"),
+cors            = require('cors');
 ejs 			= require('ejs');
 
-//MongoDB data models
-// Tells express to use the method-override package and what to look for in the URL
-app.use(methodOverride("_method"));
+// //MongoDB data models
+// // Tells express to use the method-override package and what to look for in the URL
+// app.use(methodOverride("_method"));
+
+//For CORS
+//CORS middleware
+var corsMiddleware = function(req, res, next) {
+    res.header('Access-Control-Allow-Origin', 'api.openbrewerydb.org'); //replace localhost with actual host
+    res.header('Access-Control-Allow-Methods', 'OPTIONS, GET, PUT, PATCH, POST, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, X-Requested-With, Authorization');
+    next();
+}
+
 app.set('view engine', 'ejs');
 app.engine('ejs', require('ejs').__express); //<-- requires EJS, removes Heroku error.
 
@@ -17,6 +28,7 @@ var indexRoute = require('./routes/index');
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + "/public/"));
+app.use(corsMiddleware);
 
 
 /**
@@ -41,6 +53,6 @@ app.use(express.static(__dirname + "/public/"));
 app.use("/", indexRoute);
 
 //Go to port 3000 or the port set by heroku dynamically
-app.listen(process.env.PORT || 3000, function(){
+app.listen(process.env.PORT || 8000, function(){
     console.log("Broogle is up and running");
 });
