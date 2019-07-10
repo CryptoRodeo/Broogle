@@ -1,6 +1,7 @@
 export const elements = {
     htmlDoc: document.documentElement,
     docBody: document.body,
+    infoContainer: document.querySelectorAll('.info-container'),
 	parentSearchContainer: document.querySelector('#search'),
 	searchForm: document.querySelector('#searchForm'),
 	searchInput: document.querySelector('#search__field'),

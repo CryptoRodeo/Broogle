@@ -65,15 +65,26 @@ ul#results-list
 }
 
 
-div.info-container
+li div.info-container
 {
     padding: 40px;
     width: 600px;
+    background-color: none;
     padding-bottom: 40px;
-    background-color: $whiteBackground;
     -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+li div.info-container.light
+{
+    background-color: $whiteBackground;
+}
+
+li div.info-container.--dark-mode
+{
+    background-color: $darkBackground;
+    color: $whiteText;
 }
 
 @keyframes loaderRotate

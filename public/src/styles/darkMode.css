@@ -5,3 +5,14 @@
     background-color: $darkBackground;
     color: $whiteText;
 }
+
+.--dark-mode_results_list
+{
+    background-color: $darkResultsList;
+}
+
+li div.info-container.--dark-mode
+{
+    background-color: $darkBackground !important;
+    color: $whiteText !important;
+}
