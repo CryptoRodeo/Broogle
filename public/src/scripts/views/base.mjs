@@ -8,7 +8,8 @@ export const elements = {
     likedOverlay: document.querySelector("#likeOveray"),
     likeList: document.querySelector("#likeList"),
     saveBrewery: document.querySelectorAll(".save__brewery"),
-    pointer: document.querySelector('.pointer')
+    pointer: document.querySelector('.pointer'),
+    changeMode: document.querySelector('.fa-moon')
 }
 
 /**

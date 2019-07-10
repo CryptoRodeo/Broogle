@@ -29,6 +29,16 @@ i.fas.fa-cog
     cursor: pointer;
 }
 
+i.far.fa-moon
+{
+    font-size: 20px;
+}
+
+i.far.fa-moon:hover
+{
+    cursor: pointer;
+}
+
 div#search
 {
     display: flex;
