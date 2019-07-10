@@ -2,7 +2,6 @@ var express     = require('express'),
 app             = express(),
 methodOverride = require("method-override"),
 bodyParser      = require("body-parser"),
-cors            = require('cors');
 ejs 			= require('ejs');
 
 // //MongoDB data models
