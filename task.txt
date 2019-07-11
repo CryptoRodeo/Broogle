@@ -1,5 +1,7 @@
-Refactor some of the methods used for dark mode
+- Refactor some of the methods used for dark mode
 
-begin styling of liked page
+-begin styling of liked page
 
-see what else needs to be styled.
+- see what else needs to be styled.
+
+- Replace heart image with a glyph
