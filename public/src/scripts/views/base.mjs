@@ -12,7 +12,8 @@ export const elements = {
     likeList: document.querySelector("#likeList"),
     saveBrewery: document.querySelectorAll(".save__brewery"),
     pointer: document.querySelector('.pointer'),
-    changeMode: document.querySelector('.fa-moon')
+    changeMode: document.querySelector('.fa-moon'),
+    aboutContainer: document.querySelector('#aboutContainer')
 }
 
 /**

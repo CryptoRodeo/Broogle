@@ -16,3 +16,9 @@ li div.info-container.--dark-mode
     background-color: $darkBackground !important;
     color: $whiteText !important;
 }
+
+div#aboutContainer.--dark-mode
+{
+    background-color: $darkBackground;
+    color: $whiteText;
+}

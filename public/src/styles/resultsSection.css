@@ -41,6 +41,10 @@ ul#results-list
     margin-bottom: 0;
 }
 
+ul#results-list.--dark-mode_results
+{
+    background-color: $darkResultsList;
+}
 
 #results-list li h2,h3
 {

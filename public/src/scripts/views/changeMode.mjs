@@ -31,6 +31,8 @@ export let alternateMode = () => {
     elements.changeMode.onclick = () => {
             elements.htmlDoc.classList.toggle('--dark-mode');
             elements.docBody.classList.toggle('--dark-mode');
+            elements.searchResultList.classList.toggle('--dark-mode_results');
+            elements.aboutContainer.classList.toggle('--dark-mode');
             triggerStyles();
         }
 };

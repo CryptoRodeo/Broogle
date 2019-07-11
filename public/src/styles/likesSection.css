@@ -14,8 +14,8 @@
 #aboutContainer
 {
     padding: 20px;
-    height: 450px;
-    width: 535px;
+    height: 500px;
+    width: 550px;
     background-color: $whiteBackground;
     display: block;
 }
