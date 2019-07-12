@@ -1,7 +1,5 @@
 - Refactor some of the methods used for dark mode
 
--begin styling of liked page
+- Refactor the selectors to use a BEM methodology.
 
-- see what else needs to be styled.
-
-- Replace heart image with a glyph
+- Begin planning on search filters
