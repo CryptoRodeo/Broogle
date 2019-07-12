@@ -8,7 +8,7 @@ export const toggleLike = () => {
 
 export const toggleLikeMenu = () => {
     var about = document.querySelector("#aboutLink");
-    var favButton = document.querySelector('#fav-heart');
+    var favButton = document.querySelector('.fa-heart');
     var closeButton = document.querySelector("#closeLikePage");
     var resultsContainer = document.querySelector("#resultsContainer");
     const actionButtons = [ favButton,closeButton ];
@@ -26,13 +26,14 @@ export const toggleLikeMenu = () => {
             {
                 about.textContent='';
                 resultsContainer.style.display="none";
+                favButton.style.display="none";
                 
             }
             else
             {
                 resultsContainer.style='display: none';
                 about.textContent = 'About';
-                favButton.innerHTML = '<img src="./src/images/fav-heart.png">';
+                favButton.style.display="inline-block";
             }
         }});
 };

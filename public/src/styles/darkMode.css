@@ -22,3 +22,14 @@ div#aboutContainer.--dark-mode
     background-color: $darkBackground;
     color: $whiteText;
 }
+
+i.fas.fa-heart.--dark-heart
+{
+    color: $darkResultsList;
+}
+
+div#likedOverlay.--dark-mode.--force-dark.show
+{
+    background-color: $darkBackground !important;
+    color: $whiteText !important;
+}

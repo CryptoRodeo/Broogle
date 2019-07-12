@@ -152,8 +152,9 @@ nav#navigation-bar ul
     flex-direction: row;
     justify-content: space-between;
 }
-#fav-heart img
+
+i.fas.fa-heart
 {
-    height: 23px;
-    width: 23px;
+    color: $lightBlue;
+    font-size: 23px;
 }

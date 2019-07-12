@@ -33,6 +33,17 @@ export let alternateMode = () => {
             elements.docBody.classList.toggle('--dark-mode');
             elements.searchResultList.classList.toggle('--dark-mode_results');
             elements.aboutContainer.classList.toggle('--dark-mode');
+            elements.heart.classList.toggle('--dark-heart');
+            elements.likedOverlay.classList.toggle('--dark-mode');
+            elements.likedOverlay.classList.toggle('--force-dark');
+            if(elements.likedOverlay.classList.contains('--force-dark'))
+            {
+                elements.likedOverlay.style.backgroundColor = '#2E3238';
+            }
+            else
+            {
+                elements.likedOverlay.style.backgroundColor='#fff';
+            }
             triggerStyles();
         }
 };

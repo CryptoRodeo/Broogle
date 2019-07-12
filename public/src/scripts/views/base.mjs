@@ -1,6 +1,7 @@
 export const elements = {
     htmlDoc: document.documentElement,
     docBody: document.body,
+    heart: document.querySelector('.fa-heart'),
     infoContainer: document.querySelectorAll('.info-container'),
 	parentSearchContainer: document.querySelector('#search'),
 	searchForm: document.querySelector('#searchForm'),
@@ -8,7 +9,7 @@ export const elements = {
 	searchResults: document.querySelector('#resultsContainer'),
 	searchResultList: document.querySelector("#results-list"),
     searchResultListElements: document.querySelector("#results-list li"),
-    likedOverlay: document.querySelector("#likeOveray"),
+    likedOverlay: document.querySelector("#likeOverlay"),
     likeList: document.querySelector("#likeList"),
     saveBrewery: document.querySelectorAll(".save__brewery"),
     pointer: document.querySelector('.pointer'),

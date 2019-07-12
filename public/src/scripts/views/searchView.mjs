@@ -2,7 +2,7 @@ import {elements} from './base.mjs';
 import {alternateMode, triggerStyles, isDark} from './changeMode.mjs';
 
 let about = document.querySelector("#aboutLink");
-let favButton = document.querySelector('#fav-heart');
+let favButton = document.querySelector('.fa-heart');
 let closeButton = document.querySelector("#closeLikePage");
 let resultsContainer = document.querySelector("#resultsContainer");
 const actionButtons = [ favButton,closeButton ];
@@ -103,13 +103,13 @@ export const renderResults = (breweries) => {
         if(document.querySelector("#aboutOverlay").classList == "overlay show")
         {
             about.textContent='';
-            favButton.innerHTML='';
+            favButton.style.display="none";
             about.insertAdjacentHTML('afterbegin','<i class="far fa-times-circle"></i>');
         }
         else
         {
             about.textContent = 'About';
-            favButton.innerHTML='<img src="/build/images/fav-heart.png">';
+            favButton.style.display="inline-block";
         }
     }
 })();

@@ -55,6 +55,7 @@ exports.styles = styles;
 gulp.task("css-min", minimizeImages);
 gulp.task("styles", styles);
 
-exports.default = () => {
-    gulp.watch(cssDir, styles);
+gulp.watch(cssDir,styles);
+exports.default = (styles) => {
+    styles();
 };

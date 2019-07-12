@@ -48,8 +48,13 @@
     display: block;
     margin-top: 80px;
 }
+div#likedOverlay[style].--dark-mode.show
+{
+    background-color: $darkBackground !important;
+    color: $whiteText !important;
+}
 
-#likeOverlay
+div#likeOverlay
 {
     position: absolute;
     top: 0;
@@ -61,6 +66,8 @@
     padding: 20px;  
     display: none;
 }
+
+
 
 #likeOverlay::after
 {
