@@ -5,13 +5,9 @@ import {elements} from './base.mjs';
  * DOCUMENT SELECTORS
  */
 
-//  export const mainStylesApplied = () => {
-//      return elements.htmlDoc.classList.contains('--dark-mode') || elements.docBody.classList.contains('--dark-mode');
-//  }
-
 
  export const toggleDynamicElements = () => {
-    document.querySelectorAll('.info-container').forEach( el => {
+    elements.infoContainer.forEach( el => {
         el.classList.toggle('--dark-mode') 
         el.classList.toggle('light')
     });
@@ -32,7 +28,7 @@ export let alternateMode = () => {
             elements.heart.classList.toggle('--dark-heart');
             elements.likedOverlay.classList.toggle('--dark-mode');
             elements.likedOverlay.classList.toggle('--force-dark');
-            
+
             //Had to force this element to have this style due to css filters.
             if(elements.likedOverlay.classList.contains('--force-dark'))
             {

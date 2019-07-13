@@ -22,6 +22,7 @@ alternateMode();
 // likesView.toggleLikeMenu();
 // likesView.renderLike();
 
+// localStorage.clear();
 
 
 const state = {};

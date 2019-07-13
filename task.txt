@@ -1,5 +1,7 @@
-- Refactor some of the methods used for dark mode
-
 - Refactor the selectors to use a BEM methodology.
 
 - Begin planning on search filters
+
+- Remove hash from url when deleting elements from the liked-list
+
+- Validate all saved entries so theres no duplicates.
