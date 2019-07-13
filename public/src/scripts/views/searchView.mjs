@@ -1,5 +1,5 @@
 import {elements} from './base.mjs';
-import {alternateMode, triggerStyles, isDark} from './changeMode.mjs';
+import {alternateMode, isDark} from './changeMode.mjs';
 
 let about = document.querySelector("#aboutLink");
 let favButton = document.querySelector('.fa-heart');
@@ -33,7 +33,14 @@ export const highlightSelected = id => {
     document.querySelector(`.save__brewery[href="#${id}"]`).classList.add('save__brewery--active');
     
     document.querySelectorAll('.save__brewery--active').forEach( el => {
-        el.style = "color: #eceff1";
+        if(isDark())
+        {
+            el.style.color = '#383838';
+        }
+        else
+        {
+            el.style = "color: #eceff1;";
+        }
     });
 }
 
@@ -114,6 +121,7 @@ export const renderResults = (breweries) => {
     }
 })();
 
+//Alternates between light or dark mode.
 alternateMode();
 // (function()
 // {

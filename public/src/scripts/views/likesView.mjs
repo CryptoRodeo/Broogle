@@ -1,4 +1,5 @@
 import { elements, clearLoader } from './base.mjs';
+import {alternateMode, isDark} from './changeMode.mjs';
 
 
 //Toggle the 'save' button 
@@ -43,7 +44,7 @@ export const renderLike = like => {
     let markup = `
 			<li class="likedElement">
                 <a class="likes__link" href="#${like.id}">
-                    <div class="info-container">
+                    <div class="info-container ${isDark()}">
                         <h1 class="lightblue"><a href="" class="lightblue">${like.name}</a></h1>
                         <h2>Address: ${like.address}</h2>
                         <h3>Phone#: ${like.phone}</h3>

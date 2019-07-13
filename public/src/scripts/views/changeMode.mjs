@@ -5,12 +5,12 @@ import {elements} from './base.mjs';
  * DOCUMENT SELECTORS
  */
 
- export const mainStylesApplied = () => {
-     return elements.htmlDoc.classList.contains('--dark-mode') || elements.docBody.classList.contains('--dark-mode');
- }
+//  export const mainStylesApplied = () => {
+//      return elements.htmlDoc.classList.contains('--dark-mode') || elements.docBody.classList.contains('--dark-mode');
+//  }
 
 
- export const triggerStyles = () => {
+ export const toggleDynamicElements = () => {
     document.querySelectorAll('.info-container').forEach( el => {
         el.classList.toggle('--dark-mode') 
         el.classList.toggle('light')
@@ -18,24 +18,22 @@ import {elements} from './base.mjs';
  }
 
  export const isDark = () => {
-    if(mainStylesApplied())
+    if(elements.htmlDoc.classList.contains('--dark-mode') || elements.docBody.classList.contains('--dark-mode'))
     {
         return '--dark-mode';
     }
-    else if(!mainStylesApplied())
-    {
-        return 'light';
-    }
+    return 'light';
  }
 export let alternateMode = () => {
     elements.changeMode.onclick = () => {
             elements.htmlDoc.classList.toggle('--dark-mode');
             elements.docBody.classList.toggle('--dark-mode');
             elements.searchResultList.classList.toggle('--dark-mode_results');
-            elements.aboutContainer.classList.toggle('--dark-mode');
             elements.heart.classList.toggle('--dark-heart');
             elements.likedOverlay.classList.toggle('--dark-mode');
             elements.likedOverlay.classList.toggle('--force-dark');
+            
+            //Had to force this element to have this style due to css filters.
             if(elements.likedOverlay.classList.contains('--force-dark'))
             {
                 elements.likedOverlay.style.backgroundColor = '#2E3238';
@@ -44,6 +42,8 @@ export let alternateMode = () => {
             {
                 elements.likedOverlay.style.backgroundColor='#fff';
             }
-            triggerStyles();
+            //Toggles all the dynamic list elements.
+            elements.aboutContainer.classList.toggle('--dark-mode');
+            toggleDynamicElements();
         }
 };
