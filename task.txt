@@ -8,4 +8,4 @@
 
 - Validate all saved entries so theres no duplicates.
     - Make a method for this
-- Fix/Improve the file structure.1
+- Fix/Improve the file structure.
