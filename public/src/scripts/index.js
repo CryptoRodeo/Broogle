@@ -17,7 +17,7 @@ import * as likesView from './views/likesView.mjs';
 //Change from light to dark theme.
 import {alternateMode} from './views/changeMode.mjs';
 //Used for light/dark mode.
-alternateMode();
+// alternateMode();
 
 // likesView.toggleLikeMenu();
 // likesView.renderLike();

@@ -1,0 +1,14 @@
+i.fas.fa-cogs:hover
+{
+    cursor: pointer;
+}
+
+
+div.overlay#configOverlay
+{
+    display: initial;
+    position: fixed;
+    display: block;
+    height: auto;
+    top: 0;
+}

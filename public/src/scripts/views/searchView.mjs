@@ -122,7 +122,7 @@ export const renderResults = (breweries) => {
 })();
 
 //Alternates between light or dark mode.
-alternateMode();
+// alternateMode();
 // (function()
 // {
 //     actionButtons.forEach(el => {

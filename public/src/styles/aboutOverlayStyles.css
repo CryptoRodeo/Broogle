@@ -1,0 +1,25 @@
+@import 'colors.css';
+
+div.overlay
+{
+    position:absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $overlay;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+}
+
+#aboutOverlay.show
+{
+    display: flex;
+}
+

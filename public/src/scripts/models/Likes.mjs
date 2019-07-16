@@ -10,6 +10,10 @@ export default class Likes
 
 	addLike(id, name, address, phone)
 	{
+		if(this.isLiked(id))
+		{
+			return 'Item is already liked';
+		}
 		//Holds all data attributes of the brewery
 		const like = { id, name, address, phone };
 		//Stores it in the liked array
@@ -29,7 +33,7 @@ export default class Likes
 		//Removes the element matching the index and ONLY that element
 		this.likes.splice(index,1);
 
-		//persist daya in localStorage
+		//persist data in localStorage
 		this.persistData();
 	}
 

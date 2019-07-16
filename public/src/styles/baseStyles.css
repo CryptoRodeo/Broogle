@@ -19,6 +19,9 @@ html,body
     font-family: 'Nunito Sans', sans-serif;
     margin: 0;
     height: 100vh;  
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 .lightblue,.lightblue:link,.lightblue:active
