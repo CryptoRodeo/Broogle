@@ -8,7 +8,7 @@
 ## Future Additions include:
 * ~~The ability to 'like' and store beer breweries.~~ Done.
 * Different search parameters you can use besides using your state.
-* Dark-mode
+* ~~Dark-mode~~ Done.
 * Mobile-friendly version
 
 ## Powered by:
