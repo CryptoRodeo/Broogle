@@ -1,27 +1,47 @@
 <% include ./partials/header %>
+
+<div class="overlay" id="aboutOverlay">
+    
+        <div id="aboutContainer">
+            <h1 class="lightblue">Welcome to Broogle</h1>
+            <h3>Search for breweries in your area</h3>
+            <img src="./src/images/aboutimg.png"/>
+            <h4>Version 1.0</h4>
+            <a href="https://www.openbrewerydb.org/" class="lightblue">Powered by OpenBreweryDB</a>
+            <a href="https://www.github.com/cryptorodeo" class="lightblue">Built by Bryan Ramos</a>
+        </div>
+    </div>
 <div class="overlay" id="configOverlay">
-                    
+    <div id="configContainer">
+        <h2>Filter by</h2>
+        <div id="filterContainer">
+            <div id="filters">
+                <div>
+                    <input type="radio" id="state-filter" name="filter" value="state:">
+                    <label for="state-filter">State</label>
+                </div>
+                <div>
+                        <input type="radio" id="city-filter" name="filter" value="city:">
+                    <label for="city-filter">City</label>
+                </div>
+                <div>
+                        <input type="radio" id="x-filter" name="filter" value="name:">
+                    <label for="x-filter">Undecided</label>
+                </div>
+            </div>  
+        </div>
+        <h2 id="dark-mode__header"> <i class="far fa-moon"> Dark Mode</i></h2>
+    </div>
 </div>
     <div id="landingContainer" class="container">
         <nav id="navigation-bar">
             <ul>
-                    <li id="aboutLink">About</li>
+                <li id="aboutLink">About</li>
                 <li id="fav-heart"><i class="fas fa-heart"></i></li>
                 <i class="fas fa-cogs"></i>
                 <!-- <i class="far fa-moon"></i> -->
             </ul>
         </nav>
-
-        <div class="overlay" id="aboutOverlay">
-            <div id="aboutContainer">
-                <h1 class="lightblue">Welcome to Broogle</h1>
-                <h3>Search for breweries in your area</h3>
-                <img src="./src/images/aboutimg.png"/>
-                <h4>Version 1.0</h4>
-                <a href="https://www.openbrewerydb.org/" class="lightblue">Powered by OpenBreweryDB</a>
-                <a href="https://www.github.com/cryptorodeo" class="lightblue">Built by Bryan Ramos</a>
-            </div>
-        </div>
 
         <div id="likeOverlay">
             <nav id="likedNav">

@@ -1,3 +1,5 @@
+@import 'colors.css';
+
 i.fas.fa-cogs:hover
 {
     cursor: pointer;
@@ -6,9 +8,43 @@ i.fas.fa-cogs:hover
 
 div.overlay#configOverlay
 {
-    display: initial;
     position: fixed;
-    display: block;
+    display: flex;
     height: auto;
     top: 0;
+    align-content: center;
+    justify-content: center;
+    display: none;
+}
+
+#configContainer
+{
+    width: 30%;
+    height: 35%;
+    padding: 0;
+    flex-direction: row;
+    background-color: $whiteBackground;
+}
+
+#filters
+{
+    width: auto;
+    text-align: left;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#filters input
+{
+    margin-bottom: 20px;
+}
+
+#filters label
+{
+    font-size: 20px;
+}
+
+h2#dark-mode__header
+{
+    margin-top: 40px;
 }
