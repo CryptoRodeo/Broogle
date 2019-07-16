@@ -1,0 +1,160 @@
+@import 'colors.css';
+
+
+#landingContainer
+{
+    height: 100vh;
+}
+
+#navigation-bar
+{
+    padding: 0 40px;
+    margin-top: 40px;
+}
+#navigation-bar li a
+{
+    text-decoration: none;
+    font-size: 18px;
+    color: $darkGrey;
+}
+
+i.fas.fa-cog
+{
+    font-size: 20px;
+}
+
+#navigation-bar li#aboutLink, li#fav-heart
+{
+    z-index: 20;
+    cursor: pointer;
+}
+
+i.far.fa-moon
+{
+    font-size: 20px;
+}
+
+i.far.fa-moon:hover
+{
+    cursor: pointer;
+}
+
+div#search
+{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+#search h1
+{
+    font-size: 150px;
+    text-align: center; 
+    padding: 0;
+    margin-bottom: 0;
+    font-weight: 300; 
+}
+
+#search-container
+{
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 522px;
+    height: 420px;  
+    width: auto;
+    display: flex;
+}
+
+#search
+{
+    height: auto;
+    width: 100%;
+    padding: 0; 
+    display: flex;
+    flex-direction: column;
+    align-content: center;  
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    position: relative;
+}
+
+form#searchForm
+{
+    display: flex;
+    flex-direction: row ;
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+}
+
+#searchForm input
+{
+    box-sizing: border-box;
+    margin-top: 50px;
+    padding: 0;
+    border: none;   
+    border-radius: 10px;
+    border: solid 1px $darkGrey;
+    height: 51px;
+    width: 100%;
+    padding: 0 30px;
+    font-size: 16px;
+    color: $inputGrey;
+}
+
+#searchForm input:focus {
+    outline:none;
+    border: solid 1px $darkerBlue;
+}
+
+#searchForm button
+{
+    height: 51px;
+    width: 85px; 
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-top-right-radius: 10px;
+    border-right-color: $darkGrey;
+    border-bottom-right-radius: 10px;
+    border-left: none;
+    border: solid 1px $darkGrey;
+    background-color: $whiteBackground;
+    color: $darkGrey;
+    width: 70px;
+}
+
+#searchForm button:hover
+{
+    background-color: $darkerBlue;
+    border: solid 1px $darkerBlue;
+    color: $whiteBackground;
+}
+#searchForm button img
+{
+    margin: 0 auto;
+}
+
+#navigation-bar ul li
+{
+list-style: none;
+}
+
+nav#navigation-bar ul
+{
+    padding: 0;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+i.fas.fa-heart
+{
+    color: $lightBlue;
+    font-size: 23px;
+}
