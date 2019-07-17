@@ -3,6 +3,7 @@
 
 - Begin planning on search filters
     - Make a method for this
+    - Use radio buttons to select the filters
 
 - Remove hash from url when deleting elements from the liked-list
 
