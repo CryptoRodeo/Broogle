@@ -8,11 +8,9 @@ export const toggleLike = () => {
 };
 
 export const toggleLikeMenu = () => {
-    var about = document.querySelector("#aboutLink");
     var favButton = document.querySelector('.fa-heart');
-    var closeButton = document.querySelector("#closeLikePage");
     var resultsContainer = document.querySelector("#resultsContainer");
-    const actionButtons = [ favButton,closeButton ];
+    const actionButtons = [ favButton];
 
 
     actionButtons.forEach(el => {
@@ -57,8 +55,7 @@ export const renderLike = like => {
     //Remove hash from URL
     history.replaceState(null,null,' ');
     elements.likeList.insertAdjacentHTML('beforeend', markup);
-
-};
+}
 
 export const deleteLike = id =>
 {

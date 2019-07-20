@@ -59,7 +59,7 @@ const renderBrewery = brewery =>
 	const markup = `
 			<li>
                 <a class="results__link">
-                    <div class="info-container ${isDark()}"> //will render the element dark is dark mode is toggled.
+                    <div class="info-container ${isDark()}">
                         <h1 class="lightblue"><a href="">${brewery.name}</a></h1>
                         <h2>Address: ${brewery.street} ${brewery.city}, ${brewery.state} ${brewery.postal_code}</h2>
                         <h3>Phone#: ${brewery.phone}</h3>
@@ -102,25 +102,27 @@ export const renderResults = (breweries) => {
 };
 
 //IIFE that toggles the about-me page
-(() =>
-{
-    var about = document.querySelector("#aboutLink");
-    about.onclick = function()
-    {
-        document.querySelector("#aboutOverlay").classList.toggle("show");
-        if(document.querySelector("#aboutOverlay").classList == "overlay show")
-        {
-            about.textContent='';
-            favButton.style.display="none";
-            about.insertAdjacentHTML('afterbegin','<i class="far fa-times-circle"></i>');
-        }
-        else
-        {
-            about.textContent = 'About';
-            favButton.style.display="inline-block";
-        }
-    }
-})();
+
+//Refactor this into its own module
+// (() =>
+// {
+//     let about = document.querySelector("#aboutLink");
+//     about.onclick = function()
+//     {
+//         document.querySelector("#aboutOverlay").classList.toggle("show");
+//         if(document.querySelector("#aboutOverlay").classList == "overlay show")
+//         {
+//             about.textContent='';
+//             favButton.style.display="none";
+//             about.insertAdjacentHTML('afterbegin','<i class="far fa-times-circle"></i>');
+//         }
+//         else
+//         {
+//             about.textContent = 'About';
+//             favButton.style.display="inline-block";
+//         }
+//     }
+// })();
 
 toggleConfigModal();
 

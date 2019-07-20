@@ -6,6 +6,17 @@ i.fas.fa-cogs:hover
 }
 
 
+i.fas.fa-cogs.exit:hover
+{
+    cursor: pointer;
+}
+
+i.fas.fa-cogs.exit
+{
+    z-index: 99999;
+}
+
+
 div.overlay#configOverlay
 {
     position: fixed;

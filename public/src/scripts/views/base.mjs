@@ -15,7 +15,7 @@ export const elements = {
     pointer: document.querySelector('.pointer'),
     changeMode: document.querySelector('.fa-moon'),
     aboutContainer: document.querySelector('#aboutContainer'),
-    configToggle: document.querySelector('.fa-cogs'),
+    configToggle: document.querySelector('#config'),
     configModal: document.querySelector('#configOverlay')
 }
 
