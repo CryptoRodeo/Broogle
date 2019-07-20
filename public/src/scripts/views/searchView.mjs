@@ -101,8 +101,6 @@ export const renderResults = (breweries) => {
     //renderButtons(page, recipes.length, resPerPage);
 };
 
-<<<<<<< HEAD
-=======
 //IIFE that toggles the about-me page
 
 //Refactor this into its own module
@@ -127,7 +125,6 @@ export const renderResults = (breweries) => {
 // })();
 
 toggleConfigModal();
->>>>>>> configSection
 
 //Alternates between light or dark mode.
 // alternateMode();

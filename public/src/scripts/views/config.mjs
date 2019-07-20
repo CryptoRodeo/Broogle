@@ -1,7 +1,6 @@
 import {elements} from './base.mjs';
 
 export const toggleConfigModal = () => {
-    let about = document.querySelector("#aboutLink");
     elements.configToggle.onclick = () => {
     elements.configModal.classList.toggle('show');
     elements.configToggle.classList.toggle('exit');
