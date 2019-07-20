@@ -23,16 +23,16 @@ export const toggleLikeMenu = () => {
             document.querySelector("#likeOverlay").classList.toggle("show");
             if(document.querySelector("#likeOverlay").classList == 'overlay show')
             {
-                about.textContent='';
+                favButton.classList.add('far');
+                favButton.classList.add('fa-times-circle');
                 resultsContainer.style.display="none";
-                favButton.style.display="none";
                 
             }
             else
             {
                 resultsContainer.style='display: none';
-                about.textContent = 'About';
-                favButton.style.display="inline-block";
+                favButton.classList.remove('far');
+                favButton.classList.remove('fa-times-circle');
             }
         }});
 };
@@ -62,4 +62,6 @@ export const deleteLike = id =>
     // grab child element from parent.
     const el = document.querySelector(`#brewery__${id}`);
     if(el) el.parentNode.remove();
+    //Remove hash from URL
+    history.replaceState(null,null,' ');
 }

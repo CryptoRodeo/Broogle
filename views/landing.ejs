@@ -1,6 +1,6 @@
 <% include ./partials/header %>
 
-<div class="overlay" id="aboutOverlay">
+<!-- <div class="overlay" id="aboutOverlay">
     
         <div id="aboutContainer">
             <h1 class="lightblue">Welcome to Broogle</h1>
@@ -10,7 +10,19 @@
             <a href="https://www.openbrewerydb.org/" class="lightblue">Powered by OpenBreweryDB</a>
             <a href="https://www.github.com/cryptorodeo" class="lightblue">Built by Bryan Ramos</a>
         </div>
-    </div>
+    </div> -->
+
+<div class="overlay" id="likeOverlay" >
+    <div id="likedContainer">
+        <div id="likedImgContainer">
+            <img src="./src/images/liked.png"/>
+                <h1>Saved Breweries</h1>
+        </div>
+        <ul id="likeList">
+        </ul>
+
+        </div>
+</div>
 <div class="overlay" id="configOverlay">
     <div id="configContainer">
         <h2>Filter by</h2>
@@ -42,22 +54,6 @@
                 <!-- <i class="far fa-moon"></i> -->
             </ul>
         </nav>
-
-        <div class="overlay" id="likeOverlay" >
-                <nav id="likedNav">
-                    <h4 class="lightblue" id="closeLikePage">Go back</h4>
-                </nav>
-                <div id="likedContainer">
-                    <div id="likedImgContainer">
-                        <img src="./src/images/liked.png"/>
-                        <h1>Saved Breweries</h1>
-                    </div>
-                    <ul id="likeList">
-            
-                        
-                    </ul>
-                </div>
-            </div>
 
         <div id="search">
             <div id="search-container">
