@@ -33,6 +33,9 @@ export default class Likes
 		//Removes the element matching the index and ONLY that element
 		this.likes.splice(index,1);
 
+		//Remove hash from url
+		history.replaceState(null, null, ' ');
+
 		//persist data in localStorage
 		this.persistData();
 	}
