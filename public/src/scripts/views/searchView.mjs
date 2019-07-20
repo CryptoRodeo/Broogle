@@ -1,5 +1,6 @@
 import {elements} from './base.mjs';
-import {alternateMode, isDark} from './changeMode.mjs';
+import {isDark} from './changeMode.mjs';
+import {toggleConfigModal} from './config.mjs';
 
 let about = document.querySelector("#aboutLink");
 let favButton = document.querySelector('.fa-heart');
@@ -58,7 +59,7 @@ const renderBrewery = brewery =>
 	const markup = `
 			<li>
                 <a class="results__link">
-                    <div class="info-container ${isDark()}">
+                    <div class="info-container ${isDark()}"> //will render the element dark is dark mode is toggled.
                         <h1 class="lightblue"><a href="">${brewery.name}</a></h1>
                         <h2>Address: ${brewery.street} ${brewery.city}, ${brewery.state} ${brewery.postal_code}</h2>
                         <h3>Phone#: ${brewery.phone}</h3>
@@ -120,6 +121,8 @@ export const renderResults = (breweries) => {
         }
     }
 })();
+
+toggleConfigModal();
 
 //Alternates between light or dark mode.
 // alternateMode();

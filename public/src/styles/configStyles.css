@@ -17,6 +17,11 @@ div.overlay#configOverlay
     display: none;
 }
 
+div.overlay#configOverlay.show
+{
+    display: flex;
+}
+
 #configContainer
 {
     width: 50%;
