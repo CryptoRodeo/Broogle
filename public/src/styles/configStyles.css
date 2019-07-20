@@ -19,13 +19,13 @@ div.overlay#configOverlay
 
 #configContainer
 {
-    width: 30%;
-    height: 35%;
+    width: 50%;
+    height: 90%;
     padding: 0;
     flex-direction: row;
     background-color: $whiteBackground;
+    z-index:10;
 }
-
 #filters
 {
     width: auto;
@@ -46,5 +46,5 @@ div.overlay#configOverlay
 
 h2#dark-mode__header
 {
-    margin-top: 40px;
+    margin-top: 15px;
 }

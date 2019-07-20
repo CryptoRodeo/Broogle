@@ -1,10 +1,5 @@
 import {elements} from './base.mjs';
 
-/**
- * REFACTOR LATER TO USE THE ELEMENTS OBJECT INSTEAD OF
- * DOCUMENT SELECTORS
- */
-
 
  export const toggleDynamicElements = () => {
     elements.infoContainer.forEach( el => {
@@ -13,6 +8,7 @@ import {elements} from './base.mjs';
     });
  }
 
+ //If the body and html elements are in dark mode.
  export const isDark = () => {
     if(elements.htmlDoc.classList.contains('--dark-mode') || elements.docBody.classList.contains('--dark-mode'))
     {
