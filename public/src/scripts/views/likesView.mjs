@@ -8,11 +8,9 @@ export const toggleLike = () => {
 };
 
 export const toggleLikeMenu = () => {
-    var about = document.querySelector("#aboutLink");
     var favButton = document.querySelector('.fa-heart');
-    var closeButton = document.querySelector("#closeLikePage");
     var resultsContainer = document.querySelector("#resultsContainer");
-    const actionButtons = [ favButton,closeButton ];
+    const actionButtons = [ favButton];
 
 
     actionButtons.forEach(el => {
@@ -25,7 +23,6 @@ export const toggleLikeMenu = () => {
             document.querySelector("#likeOverlay").classList.toggle("show");
             if(document.querySelector("#likeOverlay").classList == 'overlay show')
             {
-                about.textContent='';
                 resultsContainer.style.display="none";
                 favButton.style.display="none";
                 
@@ -33,7 +30,6 @@ export const toggleLikeMenu = () => {
             else
             {
                 resultsContainer.style='display: none';
-                about.textContent = 'About';
                 favButton.style.display="inline-block";
             }
         }});
@@ -54,9 +50,8 @@ export const renderLike = like => {
                 </a>
             </li>
     `;
-    //Remove hash from URL
-    history.replaceState(null,null,' ');
     elements.likeList.insertAdjacentHTML('beforeend', markup);
+    history.replaceState(null,null,' ');
 
 };
 
@@ -65,4 +60,5 @@ export const deleteLike = id =>
     // grab child element from parent.
     const el = document.querySelector(`#brewery__${id}`);
     if(el) el.parentNode.remove();
+    history.replaceState(null,null,' ');
 }

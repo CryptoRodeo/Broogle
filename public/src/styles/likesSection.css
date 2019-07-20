@@ -9,6 +9,7 @@
 #likeOverlay.show
 {
     display: flex;
+    z-index: 999;
 }
 
 #aboutContainer

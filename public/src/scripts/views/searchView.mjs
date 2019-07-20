@@ -100,26 +100,6 @@ export const renderResults = (breweries) => {
     //renderButtons(page, recipes.length, resPerPage);
 };
 
-//IIFE that toggles the about-me page
-(() =>
-{
-    var about = document.querySelector("#aboutLink");
-    about.onclick = function()
-    {
-        document.querySelector("#aboutOverlay").classList.toggle("show");
-        if(document.querySelector("#aboutOverlay").classList == "overlay show")
-        {
-            about.textContent='';
-            favButton.style.display="none";
-            about.insertAdjacentHTML('afterbegin','<i class="far fa-times-circle"></i>');
-        }
-        else
-        {
-            about.textContent = 'About';
-            favButton.style.display="inline-block";
-        }
-    }
-})();
 
 //Alternates between light or dark mode.
 // alternateMode();
