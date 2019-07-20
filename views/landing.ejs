@@ -1,6 +1,6 @@
 <% include ./partials/header %>
 
-<div class="overlay" id="aboutOverlay">
+<!-- <div class="overlay" id="aboutOverlay">
     
         <div id="aboutContainer">
             <h1 class="lightblue">Welcome to Broogle</h1>
@@ -10,7 +10,19 @@
             <a href="https://www.openbrewerydb.org/" class="lightblue">Powered by OpenBreweryDB</a>
             <a href="https://www.github.com/cryptorodeo" class="lightblue">Built by Bryan Ramos</a>
         </div>
-    </div>
+    </div> -->
+
+<div class="overlay" id="likeOverlay" >
+    <div id="likedContainer">
+        <div id="likedImgContainer">
+            <img src="./src/images/liked.png"/>
+                <h1>Saved Breweries</h1>
+        </div>
+        <ul id="likeList">
+        </ul>
+
+        </div>
+</div>
 <div class="overlay" id="configOverlay">
     <div id="configContainer">
         <h2>Filter by</h2>
@@ -34,6 +46,7 @@
     </div>
 </div>
 
+<<<<<<< HEAD
 <div id="likeOverlay" >
     <nav id="likedNav">
         <h4 class="lightblue" id="closeLikePage">Go back</h4>
@@ -47,11 +60,13 @@
         </ul>
     </div>
 </div>
+=======
+>>>>>>> configSection
     <div id="landingContainer" class="container">
         <nav id="navigation-bar">
             <ul>
                 <li id="fav-heart"><i class="fas fa-heart"></i></li>
-                <i class="fas fa-cogs"></i>
+                <i id="config" class="fas fa-cogs"></i>
                 <!-- <i class="far fa-moon"></i> -->
             </ul>
         </nav>

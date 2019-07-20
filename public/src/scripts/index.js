@@ -155,8 +155,3 @@ elements.searchForm.addEventListener('submit', e => {
     e.preventDefault(); //prevents page from refreshing.
     controlSearch();
 });
-
-// if(document.querySelector('.delete__brewery'))
-// {
-// 	document.querySelector('.delete__brewery').addEventListener('click', console.log("Hello!"));
-// }

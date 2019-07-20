@@ -6,6 +6,17 @@ i.fas.fa-cogs:hover
 }
 
 
+i.fas.fa-cogs.exit:hover
+{
+    cursor: pointer;
+}
+
+i.fas.fa-cogs.exit
+{
+    z-index: 99999;
+}
+
+
 div.overlay#configOverlay
 {
     position: fixed;
@@ -15,6 +26,11 @@ div.overlay#configOverlay
     align-content: center;
     justify-content: center;
     display: none;
+}
+
+div.overlay#configOverlay.show
+{
+    display: flex;
 }
 
 #configContainer

@@ -14,7 +14,9 @@ export const elements = {
     saveBrewery: document.querySelectorAll(".save__brewery"),
     pointer: document.querySelector('.pointer'),
     changeMode: document.querySelector('.fa-moon'),
-    aboutContainer: document.querySelector('#aboutContainer')
+    aboutContainer: document.querySelector('#aboutContainer'),
+    configToggle: document.querySelector('#config'),
+    configModal: document.querySelector('#configOverlay')
 }
 
 /**

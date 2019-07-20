@@ -1,5 +1,6 @@
 import {elements} from './base.mjs';
-import {alternateMode, isDark} from './changeMode.mjs';
+import {isDark} from './changeMode.mjs';
+import {toggleConfigModal} from './config.mjs';
 
 let about = document.querySelector("#aboutLink");
 let favButton = document.querySelector('.fa-heart');
@@ -100,6 +101,33 @@ export const renderResults = (breweries) => {
     //renderButtons(page, recipes.length, resPerPage);
 };
 
+<<<<<<< HEAD
+=======
+//IIFE that toggles the about-me page
+
+//Refactor this into its own module
+// (() =>
+// {
+//     let about = document.querySelector("#aboutLink");
+//     about.onclick = function()
+//     {
+//         document.querySelector("#aboutOverlay").classList.toggle("show");
+//         if(document.querySelector("#aboutOverlay").classList == "overlay show")
+//         {
+//             about.textContent='';
+//             favButton.style.display="none";
+//             about.insertAdjacentHTML('afterbegin','<i class="far fa-times-circle"></i>');
+//         }
+//         else
+//         {
+//             about.textContent = 'About';
+//             favButton.style.display="inline-block";
+//         }
+//     }
+// })();
+
+toggleConfigModal();
+>>>>>>> configSection
 
 //Alternates between light or dark mode.
 // alternateMode();
