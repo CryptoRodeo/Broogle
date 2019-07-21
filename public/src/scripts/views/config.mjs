@@ -1,4 +1,5 @@
 import {elements} from './base.mjs';
+import {toggleClosingButton} from './toggle.mjs'
 
 export const toggleConfigModal = () => {
     elements.configToggle.onclick = () => {
@@ -9,15 +10,13 @@ export const toggleConfigModal = () => {
 
     if(elements.configToggle.classList.contains('exit'))
     {
-        elements.configToggle.classList.add('far');
-        elements.configToggle.classList.add('fa-times-circle');
+        toggleClosingButton(elements.configToggle.classList.contains('exit'))
         about.style.display="none";
         
     }
     else
     {
-        elements.configToggle.classList.remove('far');
-        elements.configToggle.classList.remove('fa-times-circle');
+        toggleClosingButton(elements.configToggle.classList.contains('exit'))
         about.style.display="list-style";
     }
 }};
