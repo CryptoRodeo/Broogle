@@ -10,6 +10,7 @@
 * Different search parameters you can use besides using your state. (Currently being worked on 🚧)
 * ~~Dark-mode~~ Done.
 * Mobile-friendly version
+* LocalStorage element validation
 
 ## Powered by:
 * NodeJs
