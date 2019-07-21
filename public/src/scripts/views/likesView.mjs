@@ -1,6 +1,8 @@
 import { elements, clearLoader } from './base.mjs';
 import {alternateMode, isDark} from './changeMode.mjs';
 
+import {toggleClosingButton} from './toggle.mjs'
+
 
 //Toggle the 'save' button 
 export const toggleLike = () => {
@@ -23,16 +25,14 @@ export const toggleLikeMenu = () => {
             document.querySelector("#likeOverlay").classList.toggle("show");
             if(document.querySelector("#likeOverlay").classList == 'overlay show')
             {
-                favButton.classList.add('far');
-                favButton.classList.add('fa-times-circle');
+                toggleClosingButton(document.querySelector("#likeOverlay").classList.contains('overlay','show'), elements.heart);
                 resultsContainer.style.display="none";
                 
             }
             else
             {
                 resultsContainer.style='display: none';
-                favButton.classList.remove('far');
-                favButton.classList.remove('fa-times-circle');
+                toggleClosingButton(document.querySelector("#likeOverlay").classList.contains('show'), elements.heart);
             }
         }});
 };

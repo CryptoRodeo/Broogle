@@ -35,7 +35,6 @@ export let alternateMode = () => {
                 elements.likedOverlay.style.backgroundColor='#fff';
             }
             //Toggles all the dynamic list elements.
-            elements.aboutContainer.classList.toggle('--dark-mode');
             toggleDynamicElements();
         }
 };

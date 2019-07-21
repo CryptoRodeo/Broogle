@@ -10,13 +10,11 @@ export const toggleConfigModal = () => {
 
     if(elements.configToggle.classList.contains('exit'))
     {
-        toggleClosingButton(elements.configToggle.classList.contains('exit'))
-        about.style.display="none";
+        toggleClosingButton(elements.configToggle.classList.contains('exit'), elements.configToggle);
         
     }
     else
     {
-        toggleClosingButton(elements.configToggle.classList.contains('exit'))
-        about.style.display="list-style";
+        toggleClosingButton(elements.configToggle.classList.contains('exit'), elements.configToggle);
     }
 }};

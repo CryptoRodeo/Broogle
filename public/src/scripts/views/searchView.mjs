@@ -2,7 +2,6 @@ import {elements} from './base.mjs';
 import {isDark} from './changeMode.mjs';
 import {toggleConfigModal} from './config.mjs';
 
-let about = document.querySelector("#aboutLink");
 let favButton = document.querySelector('.fa-heart');
 let closeButton = document.querySelector("#closeLikePage");
 let resultsContainer = document.querySelector("#resultsContainer");
