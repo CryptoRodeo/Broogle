@@ -42,11 +42,21 @@ div.overlay#configOverlay.show
     background-color: $whiteBackground;
     z-index:10;
 }
+
+div#configContainer.--dark-mode
+{
+    color: $whiteText;
+    background-color: $darkBackground;
+}
+
+#configContainer h1
+{
+    font-size: 36px;
+}
 #filters
 {
     width: auto;
-    text-align: left;
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -55,9 +65,24 @@ div.overlay#configOverlay.show
     margin-bottom: 20px;
 }
 
-#filters label
+#filters div
 {
-    font-size: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+#filters button
+{
+
+    margin: 0 auto;
+    height: 64px;
+    width: 128px;
+    background-color: $lightBlue;
+    font-size: 24px;
+    color: $whiteText;
+    border: none;
+    border-radius: 4px;
+    
 }
 
 h2#dark-mode__header

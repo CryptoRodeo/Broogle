@@ -17,7 +17,8 @@ export let elements = {
     changeMode: document.querySelector('.fa-moon'),
     aboutContainer: document.querySelector('#aboutContainer'),
     configToggle: document.querySelector('#config'),
-    configModal: document.querySelector('#configOverlay')
+    configModal: document.querySelector('#configOverlay'),
+    configContainer: document.querySelector('#configContainer')
 };
 
 

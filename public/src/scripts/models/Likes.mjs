@@ -22,6 +22,9 @@ export default class Likes
 		//persist data in local storage
 		this.persistData();
 
+		//Remove hash from url
+		history.replaceState(null, null, ' ');
+
 		return like;
 	}
 
@@ -33,11 +36,12 @@ export default class Likes
 		//Removes the element matching the index and ONLY that element
 		this.likes.splice(index,1);
 
+		//persist data in localStorage
+		this.persistData();
+
 		//Remove hash from url
 		history.replaceState(null, null, ' ');
 
-		//persist data in localStorage
-		this.persistData();
 	}
 
 	//Tests to see if the element is already liked

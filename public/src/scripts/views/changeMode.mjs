@@ -33,6 +33,7 @@ export let alternateMode = () => {
             elements.heart.classList.toggle('--dark-heart');
             elements.likedOverlay.classList.toggle('--dark-mode');
             elements.likedOverlay.classList.toggle('--force-dark');
+            elements.configContainer.classList.toggle('--dark-mode');
 
             //Had to force this element to have this style due to css filters.
             if(elements.likedOverlay.classList.contains('--force-dark'))
