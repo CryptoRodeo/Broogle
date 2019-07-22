@@ -1,8 +1,8 @@
-export const elements = {
+export let elements = {
     htmlDoc: document.documentElement,
     docBody: document.body,
     heart: document.querySelector('.fa-heart'),
-    infoContainer: document.querySelectorAll('.info-container'),
+    infoContainer:document.querySelectorAll('.info-container'),
 	parentSearchContainer: document.querySelector('#search'),
 	searchForm: document.querySelector('#searchForm'),
 	searchInput: document.querySelector('#search__field'),
@@ -11,13 +11,15 @@ export const elements = {
     searchResultListElements: document.querySelector("#results-list li"),
     likedOverlay: document.querySelector("#likeOverlay"),
     likeList: document.querySelector("#likeList"),
+    likedElement: document.querySelectorAll('.likedElement'),
     saveBrewery: document.querySelectorAll(".save__brewery"),
     pointer: document.querySelector('.pointer'),
     changeMode: document.querySelector('.fa-moon'),
     aboutContainer: document.querySelector('#aboutContainer'),
     configToggle: document.querySelector('#config'),
     configModal: document.querySelector('#configOverlay')
-}
+};
+
 
 /**
  * Holds classes used in this file.

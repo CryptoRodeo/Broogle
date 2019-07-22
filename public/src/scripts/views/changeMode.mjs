@@ -1,20 +1,29 @@
 import {elements} from './base.mjs';
 
 
+
  export const toggleDynamicElements = () => {
-    elements.infoContainer.forEach( el => {
-        el.classList.toggle('--dark-mode') 
-        el.classList.toggle('light')
+     //An actual selector is needed in order to reference dynamic elements.
+    document.querySelectorAll('.info-container').forEach( el => {
+        el.classList.toggle('light');
+        el.classList.toggle('--dark-mode');
     });
+
+    console.log(document.querySelectorAll('.info-container'));
+    console.log(elements.infoContainer);
  }
 
  //If the body and html elements are in dark mode.
  export const isDark = () => {
+     
     if(elements.htmlDoc.classList.contains('--dark-mode') || elements.docBody.classList.contains('--dark-mode'))
     {
-        return '--dark-mode';
+        return '--dark-mode'
     }
-    return 'light';
+    else
+    {
+        return 'light'
+    }
  }
 export let alternateMode = () => {
     elements.changeMode.onclick = () => {
@@ -36,5 +45,6 @@ export let alternateMode = () => {
             }
             //Toggles all the dynamic list elements.
             toggleDynamicElements();
+            isDark();
         }
 };
