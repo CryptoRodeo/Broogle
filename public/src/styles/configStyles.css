@@ -60,11 +60,6 @@ div#configContainer.--dark-mode
     margin: 0 auto;
 }
 
-#filters input
-{
-    margin-bottom: 20px;
-}
-
 #filters div
 {
     margin-bottom: 20px;
@@ -82,7 +77,11 @@ div#configContainer.--dark-mode
     color: $whiteText;
     border: none;
     border-radius: 4px;
-    
+}
+
+#filters button:hover
+{
+    cursor: pointer;
 }
 
 h2#dark-mode__header
