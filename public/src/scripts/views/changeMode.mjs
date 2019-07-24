@@ -8,9 +8,6 @@ import {elements} from './base.mjs';
         el.classList.toggle('light');
         el.classList.toggle('--dark-mode');
     });
-
-    console.log(document.querySelectorAll('.info-container'));
-    console.log(elements.infoContainer);
  }
 
  //If the body and html elements are in dark mode.
