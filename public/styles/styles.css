@@ -1,0 +1,441 @@
+*
+{
+    box-sizing: border-box;
+}
+
+a
+{
+    text-decoration: none !important;
+}
+
+html,body
+{
+    background-color: #ffffff;
+    color: #2E3238;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    height: 100vh;  
+}
+
+.lightblue
+{
+    color: #0099CC;
+    font-weight: bold;
+}
+
+#landingContainer
+{
+    height: 100vh;
+}
+
+#navigation-bar
+{
+    padding: 0 40px;
+    margin-top: 40px;
+}
+#navigation-bar li a
+{
+    text-decoration: none;
+    font-size: 18px;
+    color: #2E3238;
+
+}
+
+#navigation-bar li#aboutLink, li#fav-heart
+{
+    z-index: 20;
+    cursor: pointer;
+}
+
+div#search
+{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+#search h1
+{
+    font-size: 150px;
+    text-align: center; 
+    padding: 0;
+    margin-bottom: 0;
+    font-weight: 300; 
+}
+
+#search-container
+{
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 522px;
+    height: 420px;  
+    width: auto;
+    display: flex;
+}
+
+#search
+{
+    height: auto;
+    width: 100%;
+    padding: 0; 
+    display: flex;
+    flex-direction: column;
+    align-content: center;  
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    position: relative;
+}
+
+form#searchForm
+{
+    display: flex;
+    flex-direction: row ;
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+}
+
+#searchForm input
+{
+    box-sizing: border-box;
+    margin-top: 50px;
+    padding: 0;
+    border: none;   
+    border-radius: 10px;
+    border: solid 1px #2E3238;
+    height: 51px;
+    width: 100%;
+    padding: 0 30px;
+    font-size: 16px;
+    color: #918EA8;
+}
+
+#searchForm input:focus {
+    outline:none;
+    border: solid 1px #33B5E5;
+}
+
+#searchForm button
+{
+    height: 51px;
+    width: 85px; 
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-top-right-radius: 10px;
+    border-right-color: #2E3238;
+    border-bottom-right-radius: 10px;
+    border-left: none;
+    border: solid 1px #2E3238;
+    background-color: #fff;
+    color: #2E3238;
+    width: 70px;
+}
+
+#searchForm button:hover
+{
+    background-color: #33B5E5;
+    border: solid 1px #33B5E5;
+    color: #fff;
+}
+#searchForm button img
+{
+    margin: 0 auto;
+}
+
+#navigation-bar ul li
+{
+list-style: none;
+}
+
+nav#navigation-bar ul
+{
+    padding: 0;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#fav-heart img
+{
+    height: 23px;
+    width: 23px;
+}
+
+/** RESULTS **/
+
+#resultsContainer
+{
+    margin-top: -50px;
+    display: none;
+}
+
+#resultsContainer  h1
+{
+    text-align: center; 
+    font-size: 48px;    
+}
+#results-list
+{
+    margin-top: 20px;
+    height: inherit;
+    background-color: #eceff1;
+}
+
+#results-list li
+{
+    display: flex;
+    flex-direction: row; 
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+
+#results-list li div
+{
+    margin: 0 auto;
+}
+
+ul#results-list
+{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #eceff1;
+    margin-bottom: 0;
+}
+
+
+#results-list li h2,h3
+{
+    font-weight: lighter;
+    text-align: left;
+}
+
+#results-list li h1
+{
+    text-align: left;
+    padding: -10px;
+    margin: -15px 0; 
+}
+
+#results-list li a
+{
+    text-align: left;   
+    padding: 0;
+    margin: 0;
+    text-decoration: none !important;  
+    color: #0099CC;
+}
+
+
+div.info-container
+{
+    padding: 40px;
+    width: 600px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
+@keyframes loaderRotate
+{
+    from {
+        transform: rotate(0deg);
+    }
+    to
+    {
+        transform: rotate(360deg);   
+    }
+}
+
+
+@keyframes pointerFloat
+{
+    from {
+        transform: translateY(0px);
+    }
+    to
+    {
+        transform: translateY(20px);   
+    }
+}
+
+.loader
+{
+    font-size: 30px;
+    display: inline-block;
+    margin: 50px auto 0;
+    color: #33B5E5;
+    animation: loaderRotate 1s linear infinite;
+}
+
+.pointer i 
+{
+    margin: 50px auto 0;
+    display: inline-block;
+    transform: rotateZ(180deg);
+    font-size: 30px;
+    animation: pointerFloat 2s linear infinite;
+}
+
+.overlay
+{
+    position:absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+}
+
+#aboutOverlay.show
+{
+    display: flex;
+}
+
+/* Like Section */
+
+#likedNav
+{
+    display: block;
+    width: 100%;
+}
+
+#likeOverlay.show
+{
+    display: flex;
+}
+
+#aboutContainer
+{
+    padding: 20px;
+    height: 450px;
+    width: 535px;
+    background-color: #fff;
+    display: block;
+}
+
+#aboutContainer *
+{
+    text-align: center;
+    display: block;
+}
+
+#aboutContainer h1
+{
+    font-size: 36px;
+}
+
+#aboutContainer img
+{
+    margin: 0 auto;
+}
+
+
+.fa-times-circle
+{
+    font-size: 24px;
+    color: #fff;
+}
+
+#aboutContainer a:nth-of-type(1) 
+{
+    display: block;
+    margin-top: 80px;
+}
+
+#likeOverlay
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;    
+    background-color: #fff;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 20px;  
+    display: none;
+}
+
+#likeOverlay::after
+{
+    height: 100vh;
+    content: "";
+}
+
+#likeOverlay.show
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ul#likeList
+{
+    list-style: none;
+}
+
+li.likedElement
+{
+    margin-top: 20px;
+}
+
+div#likeOverlay.show::after
+{
+    color: yellow;
+}
+
+#likedImgContainer
+{
+    text-align: center;
+    padding-top: 20px;    
+}
+
+#likedImgContainer img
+{
+    height: 120px;
+}
+
+#closeLikePage
+{
+    cursor: pointer;
+}
+
+footer
+{
+    padding: 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;  
+    display: block;
+    width: 100%;    
+}
+
+footer p
+{
+    text-align: center;
+    margin: 0;  
+    padding: 0; 
+    font-size: 12px;
+}
+
