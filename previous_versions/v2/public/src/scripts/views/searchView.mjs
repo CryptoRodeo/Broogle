@@ -1,10 +1,13 @@
 import {elements} from './base.mjs';
+import {alternateMode, isDark} from './changeMode.mjs';
 
 let about = document.querySelector("#aboutLink");
-let favButton = document.querySelector('#fav-heart');
+let favButton = document.querySelector('.fa-heart');
 let closeButton = document.querySelector("#closeLikePage");
 let resultsContainer = document.querySelector("#resultsContainer");
 const actionButtons = [ favButton,closeButton ];
+
+
 
 //Returns the value inputted into the search bar.
 export const getInput = () => elements.searchInput.value;
@@ -30,7 +33,14 @@ export const highlightSelected = id => {
     document.querySelector(`.save__brewery[href="#${id}"]`).classList.add('save__brewery--active');
     
     document.querySelectorAll('.save__brewery--active').forEach( el => {
-        el.style = "color: #eceff1";
+        if(isDark())
+        {
+            el.style.color = '#383838';
+        }
+        else
+        {
+            el.style = "color: #eceff1;";
+        }
     });
 }
 
@@ -48,7 +58,7 @@ const renderBrewery = brewery =>
 	const markup = `
 			<li>
                 <a class="results__link">
-                    <div class="info-container">
+                    <div class="info-container ${isDark()}">
                         <h1 class="lightblue"><a href="">${brewery.name}</a></h1>
                         <h2>Address: ${brewery.street} ${brewery.city}, ${brewery.state} ${brewery.postal_code}</h2>
                         <h3>Phone#: ${brewery.phone}</h3>
@@ -91,7 +101,7 @@ export const renderResults = (breweries) => {
 };
 
 //IIFE that toggles the about-me page
-(function()
+(() =>
 {
     var about = document.querySelector("#aboutLink");
     about.onclick = function()
@@ -100,17 +110,19 @@ export const renderResults = (breweries) => {
         if(document.querySelector("#aboutOverlay").classList == "overlay show")
         {
             about.textContent='';
-            favButton.innerHTML='';
+            favButton.style.display="none";
             about.insertAdjacentHTML('afterbegin','<i class="far fa-times-circle"></i>');
         }
         else
         {
             about.textContent = 'About';
-            favButton.innerHTML='<img src="/assets/fav-heart.png">';
+            favButton.style.display="inline-block";
         }
     }
 })();
 
+//Alternates between light or dark mode.
+alternateMode();
 // (function()
 // {
 //     actionButtons.forEach(el => {

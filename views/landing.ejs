@@ -1,39 +1,77 @@
 <% include ./partials/header %>
+
+<!-- <div class="overlay" id="aboutOverlay">
+    
+        <div id="aboutContainer">
+            <h1 class="lightblue">Welcome to Broogle</h1>
+            <h3>Search for breweries in your area</h3>
+            <img src="./src/images/aboutimg.png"/>
+            <h4>Version 1.0</h4>
+            <a href="https://www.openbrewerydb.org/" class="lightblue">Powered by OpenBreweryDB</a>
+            <a href="https://www.github.com/cryptorodeo" class="lightblue">Built by Bryan Ramos</a>
+        </div>
+    </div> -->
+
+<div class="overlay" id="configOverlay">
+    <div id="configContainer">
+        <h1>Filter by</h1>
+        <div id="filterContainer">
+            <div id="filters">
+                <div>
+                    <button class="filter_buttons" value = "by_city">City</button>
+                </div>
+                <div>
+                    <button class="filter_buttons" value = "by_name" >Name</button>
+                </div>
+                <div>
+                    <button class="filter_buttons" value = "by_state">State</button>
+                </div>
+
+                <div>
+                    <button class="filter_buttons" value = "by_type">Type</button>
+                </div>
+
+                <div>
+                    <button class="filter_buttons" value = "by_tag">Tag</button>
+                </div>
+            </div>  
+        </div>
+        <h2 id="dark-mode__header"> <i class="far fa-moon"> Dark Mode</i></h2>
+    </div>
+</div>
+
     <div id="landingContainer" class="container">
+        <div class="overlay" id="likeOverlay" >
+    <div id="likedContainer">
+        <div id="likedImgContainer">
+            <img src="./src/images/liked.png"/>
+                <h1>Saved Breweries</h1>
+        </div>
+        <ul id="likeList">
+        </ul>
+
+        </div>
+</div>
+
+
+<div class="overlay" id="likeOverlay" >
+        <div id="likedContainer">
+            <div id="likedImgContainer">
+                <img src="./src/images/liked.png"/>
+                    <h1>Saved Breweries</h1>
+            </div>
+            <ul id="likeList">
+            </ul>
+    
+            </div>
+    </div>
         <nav id="navigation-bar">
             <ul>
-                <li id="aboutLink">About</li>
-                <li id="fav-heart"><img src="/assets/fav-heart.png"></li>
+                <li id="fav-heart"><i class="fas fa-heart"></i></li>
+                <i id="config" class="fas fa-cogs"></i>
+                <!-- <i class="far fa-moon"></i> -->
             </ul>
         </nav>
-
-        <div class="overlay" id="aboutOverlay">
-            <div id="aboutContainer">
-                <h1 class="lightblue">Welcome to Broogle</h1>
-                <h3>Search for breweries in your area</h3>
-                <img src="./assets/aboutimg.png"/>
-                <h4>Version 1.0</h4>
-                <a href="https://www.openbrewerydb.org/" class="lightblue">Powered by OpenBreweryDB</a>
-                <a href="https://www.github.com/coffeecodecreate" class="lightblue">Built by Bryan Ramos</a>
-            </div>
-        </div>
-
-        <div id="likeOverlay">
-            <nav id="likedNav">
-                <h4 class="lightblue" id="closeLikePage">Go back</h4>
-            </nav>
-            <div id="likedContainer">
-                <div id="likedImgContainer">
-                    <img src="/assets/liked.png"/>
-                    <h1>Saved Breweries</h1>
-                </div>
-                <ul id="likeList">
-                    <!-- <li class="likedElement">
-                        
-                    </li> -->
-                </ul>
-            </div>
-        </div>
 
         <div id="search">
             <div id="search-container">
@@ -50,37 +88,7 @@
     <div id="resultsContainer" class="container">
             <h1 >Results</h1>
         <ul id="results-list">
-            <li>
-                <a class="results__link">
-                    <div class="info-container">
-                        <h1 class="lightblue"><a href="">Almanac Beer Company</a></h1>
-                        <h2>Address: </h2>
-                        <h3>Phone#:</h3>
-                        <h3 class="lightblue"><a href="">Get Directions</a></h3>
-                        <h3 class="lightblue"><a href="">Save</a></h3>
-                    </div>
-                </a>
-            </li>
 
-            <li>
-                <div class="info-container">
-                        <h1 class="lightblue"><a href="">Almanac Beer Company</a></h1>
-                        <h2>Address: </h2>
-                        <h3>Phone#:</h3>
-                        <h3 class="lightblue"><a href="">Get Directions</a></h3>
-                        <h3 class="lightblue"><a href="">Save</a></h3>
-                </div>
-            </li>
-
-                <li>
-                        <div class="info-container">
-                            <h1 class="lightblue"><a href="">Almanac Beer Company</a></h1>
-                            <h2>Address: </h2>
-                            <h3>Phone#:</h3>
-                            <h3 class="lightblue"><a href="">Get Directions</a></h3>
-                            <h3 class="lightblue"><a href="">Save</a></h3>
-                        </div>
-                    </li>
         </ul>
     </div>  
 <% include ./partials/footer %>

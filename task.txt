@@ -1,0 +1,14 @@
+- Refactor the selectors to use a BEM methodology.
+
+
+- Begin planning on search filters
+    - Make a method for this
+    - Use radio buttons to select the filters
+
+- Remove hash from url when deleting elements from the liked-list
+
+- Validate all saved entries so theres no duplicates.
+    - Make a method for this
+- Fix/Improve the file structure.
+
+-Add error or no search results page

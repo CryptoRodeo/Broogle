@@ -7,10 +7,9 @@
 
 ## Future Additions include:
 * ~~The ability to 'like' and store beer breweries.~~ Done.
-* Different search parameters you can use besides using your state. (Currently being worked on 🚧)
-* ~~Dark-mode~~ Done.
+* Different search parameters you can use besides using your state.
+* Dark-mode
 * Mobile-friendly version
-* LocalStorage element validation
 
 ## Powered by:
 * NodeJs
