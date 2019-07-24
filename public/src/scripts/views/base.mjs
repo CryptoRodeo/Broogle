@@ -18,7 +18,8 @@ export let elements = {
     aboutContainer: document.querySelector('#aboutContainer'),
     configToggle: document.querySelector('#config'),
     configModal: document.querySelector('#configOverlay'),
-    configContainer: document.querySelector('#configContainer')
+    configContainer: document.querySelector('#configContainer'),
+    filter_buttons: document.querySelectorAll('.filter_buttons')
 };
 
 

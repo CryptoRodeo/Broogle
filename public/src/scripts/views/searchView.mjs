@@ -13,6 +13,13 @@ const actionButtons = [ favButton,closeButton ];
 export const getInput = () => elements.searchInput.value;
 
 
+export const applyFilter = () => {
+    elements.filter_buttons.forEach( el => {
+        el.onclick = () => alert(el.value);
+    })
+}
+
+applyFilter();
 export const clearInput = () => {
 	elements.searchInput.value ='';
 }
