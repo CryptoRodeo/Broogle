@@ -4,8 +4,6 @@ import {toggleConfigModal} from './config.mjs';
 
 let favButton = document.querySelector('.fa-heart');
 let closeButton = document.querySelector("#closeLikePage");
-let resultsContainer = document.querySelector("#resultsContainer");
-const actionButtons = [ favButton,closeButton ];
 
 
 
@@ -13,13 +11,13 @@ const actionButtons = [ favButton,closeButton ];
 export const getInput = () => elements.searchInput.value;
 
 
-export const applyFilter = () => {
-    elements.filter_buttons.forEach( el => {
-        el.onclick = () => alert(el.value);
-    })
-}
+// export const applyFilter = () => {
+//     elements.filter_buttons.forEach( el => {
+//         el.onclick = () => alert(el.value);
+//     })
+// }
 
-applyFilter();
+// applyFilter();
 export const clearInput = () => {
 	elements.searchInput.value ='';
 }

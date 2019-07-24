@@ -1,5 +1,5 @@
 
-import {getByState} from '../config.js'
+import {ToggleFilter} from '../config.js'
 
 
 export default class Search
@@ -12,7 +12,7 @@ export default class Search
 	async getResults()
 	{
 		try {
-			this.result = await fetch(`${getByState}${this.query}`)
+			this.result = await fetch(`${ToggleFilter()}${this.query}`)
 			.then(data => data.json()) //Format it into json
 			.then(res =>{
 				return res;
