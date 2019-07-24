@@ -6,9 +6,9 @@
 ##(V2) is now complete!
 
 ## Future Additions include:
-* ~~The ability to 'like' and store beer breweries.~~ Done.
-* Different search parameters you can use besides using your state. (Currently being worked on 🚧)
-* ~~Dark-mode~~ Done.
+* ~~The ability to 'like' and store beer breweries.~~ Done.✅
+* ~~Different search parameters you can search by.~~ Done. ✅
+* ~~Dark-mode~~ Done.✅
 * Mobile-friendly version
 * LocalStorage element validation
 
