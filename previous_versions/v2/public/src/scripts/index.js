@@ -13,8 +13,16 @@ import Brewery from './models/Brewery.mjs';
 import * as searchView from './views/searchView.mjs';
 import * as likesView from './views/likesView.mjs';
 
+
+//Change from light to dark theme.
+import {alternateMode} from './views/changeMode.mjs';
+//Used for light/dark mode.
+alternateMode();
+
 // likesView.toggleLikeMenu();
 // likesView.renderLike();
+
+// localStorage.clear();
 
 
 const state = {};
@@ -70,8 +78,7 @@ const controlBrewery = async () => {
 		{
 			await state.brewery.getInfo();
 			controlLike();
-
-			console.log(state.likes);
+ 
 		}
 		catch(err)
 		{
@@ -90,7 +97,7 @@ const controlBrewery = async () => {
 	 if(!state.likes) state.likes = new Likes();
 
 	 //Store the current ID focused.
-	 const currentID = state.brewery.id;
+	 const currentID = window.location.hash.replace('#','');
 
 	 //User has not liked current brewery, but is liking it now.
 	 if(!state.likes.isLiked(currentID))
@@ -105,9 +112,14 @@ const controlBrewery = async () => {
 			 state.brewery.info.phone
 		 );
 
-
 		//Add like to the like page:
 		likesView.renderLike(newLike);
+	}
+	//User is deleting the liked brewery
+	else
+	{
+		likesView.deleteLike(currentID);
+		state.likes.deleteLike(currentID);
 	}
 	likesView.toggleLikeMenu();
 };
@@ -124,7 +136,6 @@ const controlBrewery = async () => {
 	 });
  });
 
-
 // /**
 //  * LIST Controller
 //  */
@@ -140,15 +151,12 @@ const controlBrewery = async () => {
 
 //  }
 
-
-
-/**
- * LIKE Controller
- */
-
- 
-
 elements.searchForm.addEventListener('submit', e => {
     e.preventDefault(); //prevents page from refreshing.
     controlSearch();
 });
+
+// if(document.querySelector('.delete__brewery'))
+// {
+// 	document.querySelector('.delete__brewery').addEventListener('click', console.log("Hello!"));
+// }
