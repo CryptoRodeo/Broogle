@@ -36,28 +36,52 @@ div.overlay#configOverlay.show
 #configContainer
 {
     width: 50%;
-    height: 90%;
+    height: 45%;
     padding: 0;
     flex-direction: row;
     background-color: $whiteBackground;
     z-index:10;
 }
+
+div#configContainer.--dark-mode
+{
+    color: $whiteText;
+    background-color: $darkBackground;
+}
+
+#configContainer h1
+{
+    font-size: 36px;
+}
 #filters
 {
     width: auto;
-    text-align: left;
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
 }
 
-#filters input
+#filters div
 {
     margin-bottom: 20px;
+    display: inline-block;
 }
 
-#filters label
+#filters button
 {
-    font-size: 20px;
+
+    margin: 0 auto;
+    height: 32px;
+    width: 64px;
+    background-color: $lightBlue;
+    font-size: 16px;
+    color: $whiteText;
+    border: none;
+    border-radius: 4px;
+}
+
+#filters button:hover
+{
+    cursor: pointer;
 }
 
 h2#dark-mode__header

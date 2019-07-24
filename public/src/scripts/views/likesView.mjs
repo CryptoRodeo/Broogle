@@ -1,7 +1,9 @@
 import { elements, clearLoader } from './base.mjs';
 import {alternateMode, isDark} from './changeMode.mjs';
 
+import {toggleClosingButton} from './toggle.mjs'
 
+let indexCounter = 0;
 //Toggle the 'save' button 
 export const toggleLike = () => {
    
@@ -23,16 +25,14 @@ export const toggleLikeMenu = () => {
             document.querySelector("#likeOverlay").classList.toggle("show");
             if(document.querySelector("#likeOverlay").classList == 'overlay show')
             {
-                favButton.classList.add('far');
-                favButton.classList.add('fa-times-circle');
+                toggleClosingButton(document.querySelector("#likeOverlay").classList.contains('overlay','show'), elements.heart);
                 resultsContainer.style.display="none";
                 
             }
             else
             {
                 resultsContainer.style='display: none';
-                favButton.classList.remove('far');
-                favButton.classList.remove('fa-times-circle');
+                toggleClosingButton(document.querySelector("#likeOverlay").classList.contains('show'), elements.heart);
             }
         }});
 };
@@ -40,26 +40,27 @@ export const toggleLikeMenu = () => {
 export const renderLike = like => {
     
     let markup = `
-			<li class="likedElement">
-                <a class="likes__link" href="#${like.id}">
-                    <div class="info-container ${isDark()}">
-                        <h1 class="lightblue"><a href="" class="lightblue">${like.name}</a></h1>
-                        <h2>Address: ${like.address}</h2>
+    <li class="likedElement" id="element_${like.id}">
+        <a class="likes__link" href="#${like.id}">
+            <div class="info-container ${isDark()}">
+                <h1 class="lightblue"><a href="" class="lightblue">${like.name}</a></h1>
+                    <h2>Address: ${like.address}</h2>
                         <h3>Phone#: ${like.phone}</h3>
                         <h3 class="lightblue"><a href=""class="lightblue">Get Directions</a></h3>
-                        <a class="delete__brewery" id="brewery__${like.id}" style="color: #ff4444" href="#${like.id}">Delete</a>
-                    </div>
-                </a>
-            </li>
+            <a class="delete__brewery" id="brewery__${like.id}" style="color: #ff4444" href="#${like.id}">Delete</a>
+            </div>
+        </a>
+    </li>
     `;
     elements.likeList.insertAdjacentHTML('beforeend', markup);
+    indexCounter += 1;
 }
 
 export const deleteLike = id =>
 {
     // grab child element from parent.
-    const el = document.querySelector(`#brewery__${id}`);
-    if(el) el.parentNode.remove();
+    const el = document.querySelector(`#element_${id}`);
+    if(el) el.parentElement.removeChild(el);
     //Remove hash from URL
     history.replaceState(null,null,' ');
 }

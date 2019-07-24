@@ -1,20 +1,29 @@
 import {elements} from './base.mjs';
 
 
+
  export const toggleDynamicElements = () => {
-    elements.infoContainer.forEach( el => {
-        el.classList.toggle('--dark-mode') 
-        el.classList.toggle('light')
+     //An actual selector is needed in order to reference dynamic elements.
+    document.querySelectorAll('.info-container').forEach( el => {
+        el.classList.toggle('light');
+        el.classList.toggle('--dark-mode');
     });
+
+    console.log(document.querySelectorAll('.info-container'));
+    console.log(elements.infoContainer);
  }
 
  //If the body and html elements are in dark mode.
  export const isDark = () => {
+     
     if(elements.htmlDoc.classList.contains('--dark-mode') || elements.docBody.classList.contains('--dark-mode'))
     {
-        return '--dark-mode';
+        return '--dark-mode'
     }
-    return 'light';
+    else
+    {
+        return 'light'
+    }
  }
 export let alternateMode = () => {
     elements.changeMode.onclick = () => {
@@ -24,6 +33,7 @@ export let alternateMode = () => {
             elements.heart.classList.toggle('--dark-heart');
             elements.likedOverlay.classList.toggle('--dark-mode');
             elements.likedOverlay.classList.toggle('--force-dark');
+            elements.configContainer.classList.toggle('--dark-mode');
 
             //Had to force this element to have this style due to css filters.
             if(elements.likedOverlay.classList.contains('--force-dark'))
@@ -35,7 +45,7 @@ export let alternateMode = () => {
                 elements.likedOverlay.style.backgroundColor='#fff';
             }
             //Toggles all the dynamic list elements.
-            elements.aboutContainer.classList.toggle('--dark-mode');
             toggleDynamicElements();
+            isDark();
         }
 };

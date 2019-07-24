@@ -109,6 +109,12 @@ li.likedElement
     text-align:left;
 }
 
+li.likedElement div.infoContainer.--dark-mode
+{
+    background-color: $darkBackground !important;
+    color: $whiteText !important;
+}
+
 #likedImgContainer
 {
     text-align: center;
