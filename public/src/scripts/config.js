@@ -23,4 +23,3 @@ export const ToggleFilter = () => {
 
 export const getByFilter = `https://api.openbrewerydb.org/breweries?${filters.current}=`;
 export const getById    = 'https://api.openbrewerydb.org/breweries/';
-WatchFilterChange();
