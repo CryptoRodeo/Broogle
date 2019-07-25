@@ -15,12 +15,32 @@ export const ToggleFilter = () => {
     elements.filter_buttons.forEach( el => {
         el.onclick = () => {
             let filterType = filters[el.value].slice(3);
-            elements.searchInput.value = `Type in your ${filterType} to find breweries near you.`;
+            toggleSearchInput(filterType);
             filters.current = filters[el.value];
         }
     });
     return getByFilter;
 };
 ToggleFilter();
+
+const toggleSearchInput = (filterType) => {
+    if(filterType == 'name')
+    {
+        elements.searchInput.value = `Type in the ${filterType} of the brewery.`;
+    }
+    else if (filterType == 'type')
+    {
+        elements.searchInput.value = `Type in the ${filterType} of brewery you're looking for.`;
+    }
+
+    else if (filterType == 'tag')
+    {
+        elements.searchInput.value = `Search for breweries using ${filterType}s.`;
+    }
+    else
+    {
+        elements.searchInput.value = `Type in your ${filterType} to find breweries near you. 🍺`;
+    }
+}
 
 export const getById    = 'https://api.openbrewerydb.org/breweries/';
