@@ -14,11 +14,13 @@ export const ToggleFilter = () => {
     const getByFilter = `https://api.openbrewerydb.org/breweries?${filters.current}=`;
     elements.filter_buttons.forEach( el => {
         el.onclick = () => {
-            alert(`Search filter has been changed to ${el.value}`);
+            let filterType = filters[el.value].slice(3);
+            elements.searchInput.value = `Type in your ${filterType} to find breweries near you.`;
             filters.current = filters[el.value];
         }
     });
     return getByFilter;
 };
+ToggleFilter();
 
 export const getById    = 'https://api.openbrewerydb.org/breweries/';
