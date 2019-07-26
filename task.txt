@@ -4,11 +4,6 @@
 
 - Find a way to save the users preference on light or dark mode so its automatically that when they use the app.
 
-- Begin planning on search filters
-    - Make a method for this
-	- Change the values in the search bar based on the filter
-	- Change the values in the search request based on filter
-
 - Validate all saved entries so theres no duplicates.
     - Make a method for this
 - Fix/Improve the file structure.
