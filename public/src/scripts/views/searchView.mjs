@@ -2,9 +2,6 @@ import {elements} from './base.mjs';
 import {isDark} from './changeMode.mjs';
 import {toggleConfigModal} from './config.mjs';
 
-let favButton = document.querySelector('.fa-heart');
-let closeButton = document.querySelector("#closeLikePage");
-
 
 
 //Returns the value inputted into the search bar.

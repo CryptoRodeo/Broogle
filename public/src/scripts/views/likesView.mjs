@@ -2,8 +2,6 @@ import { elements } from './base.mjs';
 import {isDark} from './changeMode.mjs';
 
 import {toggleClosingButton} from './toggle.mjs'
-
-let indexCounter = 0;
 //Toggle the 'save' button 
 export const toggleLike = () => {
    
@@ -53,7 +51,6 @@ export const renderLike = like => {
     </li>
     `;
     elements.likeList.insertAdjacentHTML('beforeend', markup);
-    indexCounter += 1;
 }
 
 export const deleteLike = id =>

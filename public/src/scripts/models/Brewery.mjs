@@ -16,31 +16,23 @@ export default class Brewery
 				{
 					return res;
 				});
-				// this.name = res.name,
-				// this.brewery_type = res.brewery_type,	
-				// this.street = res.street,
-				// this.city = res.city,
-				// this.state = res.state,
-				// this.postal_code = res.postal_code,
-				// this.phone = res.phone,
-				// this.website_url = res.website_url);
 			}
 		catch(e) {
-			// error statements
 			console.log(e);
 		}
 	}
 
-	printProps()
-	{
-		console.log(this.name);
-		console.log(this.brewery_type);
-		console.log(this.street);
-		console.log(this.city);
-		console.log(this.state);
-		console.log(this.postal_code);
-		console.log(this.phone);
-		console.log(this.website_url);
-	}
+	//Used for testing
+	// printProps()
+	// {
+	// 	console.log(this.name);
+	// 	console.log(this.brewery_type);
+	// 	console.log(this.street);
+	// 	console.log(this.city);
+	// 	console.log(this.state);
+	// 	console.log(this.postal_code);
+	// 	console.log(this.phone);
+	// 	console.log(this.website_url);
+	// }
 
 };
