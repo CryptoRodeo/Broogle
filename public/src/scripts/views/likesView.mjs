@@ -1,5 +1,5 @@
-import { elements, clearLoader } from './base.mjs';
-import {alternateMode, isDark} from './changeMode.mjs';
+import { elements } from './base.mjs';
+import {isDark} from './changeMode.mjs';
 
 import {toggleClosingButton} from './toggle.mjs'
 
