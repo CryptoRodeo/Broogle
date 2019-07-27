@@ -1,12 +1,6 @@
 var express     = require('express'),
-app             = express(),
-methodOverride = require("method-override"),
-bodyParser      = require("body-parser"),
-ejs 			= require('ejs');
+app             = express();
 
-// //MongoDB data models
-// // Tells express to use the method-override package and what to look for in the URL
-// app.use(methodOverride("_method"));
 
 //For CORS
 //CORS middleware
@@ -24,8 +18,6 @@ app.engine('ejs', require('ejs').__express); //<-- requires EJS, removes Heroku 
 //Routes to pages
 var indexRoute = require('./routes/index');
 
-
-app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + "/public/"));
 app.use(corsMiddleware);
 
@@ -53,5 +45,5 @@ app.use("/", indexRoute);
 
 //Go to port 3000 or the port set by heroku dynamically
 app.listen(process.env.PORT || 8000, function(){
-    console.log("Broogle is up and running");
+    console.log("App is running");
 });

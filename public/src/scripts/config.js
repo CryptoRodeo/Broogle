@@ -26,20 +26,20 @@ ToggleFilter();
 const toggleSearchInput = (filterType) => {
     if(filterType == 'name')
     {
-        elements.searchInput.value = `Type in the ${filterType} of the brewery.`;
+        elements.searchInput.placeholder = `Type in the ${filterType} of the brewery.`;
     }
     else if (filterType == 'type')
     {
-        elements.searchInput.value = `Type in the ${filterType} of brewery you're looking for.`;
+        elements.searchInput.placeholder = `Type in the ${filterType} of brewery you're looking for.`;
     }
 
     else if (filterType == 'tag')
     {
-        elements.searchInput.value = `Search for breweries using ${filterType}s.`;
+        elements.searchInput.placeholder = `Search for breweries using ${filterType}s.`;
     }
     else
     {
-        elements.searchInput.value = `Type in your ${filterType} to find breweries near you. 🍺`;
+        elements.searchInput.placeholder = `Type in your ${filterType} to find breweries near you. 🍺`;
     }
 }
 
