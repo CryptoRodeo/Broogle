@@ -104,24 +104,3 @@ export const renderResults = (breweries) => {
 // })();
 
 toggleConfigModal();
-
-//Alternates between light or dark mode.
-// alternateMode();
-// (function()
-// {
-//     actionButtons.forEach(el => {
-//         el.onclick = function()
-//         {
-//             document.querySelector("#likeOverlay").classList.toggle("show");
-//             if(document.querySelector("#likeOverlay").classList == 'overlay show')
-//             {
-//                 about.textContent='';
-//             }
-//             else
-//             {
-//                 about.textContent = 'About';
-//                 favButton.innerHTML = '<img src="/assets/fav-heart.png">';
-//             }
-//         }
-//     })
-// })();
