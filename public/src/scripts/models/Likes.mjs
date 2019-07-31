@@ -12,20 +12,24 @@ export default class Likes
 	{
 		if(this.isLiked(id))
 		{
-			return 'Item is already liked';
+			alert("The brewery you're trying to add is already liked!");
+			return;
 		}
-		//Holds all data attributes of the brewery
-		const like = { id, name, address, phone };
-		//Stores it in the liked array
-		this.likes.push(like);
+		else
+		{
+			//Holds all data attributes of the brewery
+			const like = { id, name, address, phone };
+			//Stores it in the liked array
+			this.likes.push(like);
 
-		//persist data in local storage
-		this.persistData();
+			//persist data in local storage
+			this.persistData();
 
-		//Remove hash from url
-		history.replaceState(null, null, ' ');
+			//Remove hash from url
+			history.replaceState(null, null, ' ');
 
-		return like;
+			return like;
+		}
 	}
 
 	deleteLike(id)

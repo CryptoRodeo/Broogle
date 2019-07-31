@@ -13,6 +13,9 @@ import Brewery from './models/Brewery.mjs';
 import * as searchView from './views/searchView.mjs';
 import * as likesView from './views/likesView.mjs';
 
+// import {checkLink} from './validation/like_validation.mjs';
+// checkLink();
+
 
 //Change from light to dark theme.
 import {alternateMode} from './views/changeMode.mjs';
@@ -50,6 +53,7 @@ const controlSearch = async() => {
 			clearLoader();
 
 			renderPointer(elements.parentSearchContainer);
+			state.search.result = state.search.result.filter( el => !state.likes.isLiked(`${el.id}`));
 			searchView.renderResults(state.search.result);
 			//If promise returned:
 		} catch(e) {

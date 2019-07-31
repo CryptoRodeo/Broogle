@@ -23,6 +23,7 @@ export const clearResults = () => {
 	elements.searchResultList.innerHTML = '';
 }
 
+
 export const highlightSelected = id => {
     const resultsSelected = Array.from(document.querySelectorAll('.save__brewery'));
 	resultsSelected.forEach(el => {
@@ -32,8 +33,9 @@ export const highlightSelected = id => {
 	//Select the link with the href attribute holding the ID
     //Then add the class that gives it the selected styles.
 
-    document.querySelector(`.save__brewery[href="#${id}"]`).classList.add('save__brewery--active');
-    
+    if(document.querySelector(`.save__brewery[href="#${id}"]`)){
+        document.querySelector(`.save__brewery[href="#${id}"]`).classList.add('save__brewery--active');
+    }
     document.querySelectorAll('.save__brewery--active').forEach( el => {
         if(isDark())
         {
@@ -73,33 +75,9 @@ const renderBrewery = brewery =>
     elements.searchResultList.insertAdjacentHTML('beforeend', markup);
 }
 
-
-
 export const renderResults = (breweries) => {
-
-    
-    // render results of currente page
-    //The starting and ending page.
-    // const start = (page - 1) * resPerPage;
-    // const end = page * resPerPage;
-
-    /**
-     * Example:
-     * If the page by default is 1, the start index
-     * for the slice will be 0
-     * 
-     * The end will be the page number (default to 1)
-     * times the number of results per page (default to 10);
-     * 
-     *  Take 10 of the recipes from the recipes array, pass them
-     *  into the renderRecipe function.
-     */
-    
     document.querySelector('#resultsContainer').style.display = 'block';
     breweries.slice().forEach(renderBrewery);
-
-    // render pagination buttons
-    //renderButtons(page, recipes.length, resPerPage);
 };
 
 //IIFE that toggles the about-me page
