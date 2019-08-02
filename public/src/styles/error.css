@@ -1,0 +1,8 @@
+@import 'colors.css';
+div#noResultsContainer.container
+{
+    margin-top: -150px;
+    display: none;
+    text-align: center;
+}
+

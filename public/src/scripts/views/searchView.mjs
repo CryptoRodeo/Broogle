@@ -76,8 +76,17 @@ const renderBrewery = brewery =>
 }
 
 export const renderResults = (breweries) => {
-    document.querySelector('#resultsContainer').style.display = 'block';
-    breweries.slice().forEach(renderBrewery);
+    if(breweries.length == 0)
+    {
+        elements.searchResults.style.display = 'none';
+        document.querySelector('#noResultsContainer').style.display = 'block';
+    }
+    else
+    {
+        elements.searchResults.style.display = 'block';
+        document.querySelector('#noResultsContainer').style.display = 'none';
+        breweries.slice().forEach(renderBrewery);
+    }
 };
 
 //IIFE that toggles the about-me page
