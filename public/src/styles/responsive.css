@@ -1,0 +1,135 @@
+@media only screen and (max-width: 670px)
+{
+    ul#likeList
+    {
+        text-align: center;
+        padding: 30px;
+
+    }
+
+    ul#likeList li.likedElement div.info-container
+    {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 565px)
+{
+    div#search-container
+    {
+        width: 100%;
+    }
+    #search-container h1
+    {
+        font-size: 120px;
+    }
+
+    form#searchForm
+    {
+        width: 70%;
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width: 565px)
+{
+    div#search-container
+    {
+        width: 100%;
+    }
+    form#searchForm
+    {
+        width: 90%;
+        align-self: center;
+    }
+    form#searchForm input
+    {
+        font-size: 16px;
+    }
+
+    form#searchForm input, form#searchForm button
+    {
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 515px)
+{
+    form#searchForm
+    {
+        align-self: center;
+    }
+    form#searchForm input
+    {
+        font-size: 14px;
+    }
+
+    form#searchForm input, form#searchForm button
+    {
+        height: 50px;
+    }
+}
+@media only screen and (max-width: 469px)
+{
+    form#searchForm button
+    {
+        width: 50px;
+    }
+    ul#likeList li.likedElement div.info-container *
+    {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 425px)
+{
+    #search-container h1
+    {
+        font-size: 90px;
+    }
+    form#searchForm input
+    {
+        font-size: 12px;
+    }
+    div#configContainer
+    {
+        width: 100%;
+    }
+
+}
+@media only screen and (max-width: 375px)
+{
+    #search-container h1
+    {
+        font-size: 80px;
+    }
+    form#searchForm input
+    {
+        padding: 4px;
+    }
+}
+
+@media only screen and (max-width: 320px)
+{
+    form#searchForm input
+    {
+        font-size: 12px;
+    }
+
+
+    ul#results-list li
+    {
+        height: 250px;
+    }
+
+    div.info-container *
+    {
+        font-size: 12px;
+    }
+
+    ul#likeList li.likedElement div.info-container *
+    {
+        font-size: 14px;
+    }
+
+}
