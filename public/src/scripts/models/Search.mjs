@@ -21,6 +21,5 @@ export default class Search
 			// statements
 			console.log(e);
 		}
-		console.log(this.result);
 	}
 }
