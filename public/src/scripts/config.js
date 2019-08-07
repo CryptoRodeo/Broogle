@@ -1,3 +1,7 @@
+/**
+ * This file handles all the configuration such as search query filtering
+ */
+
 //by state
 import {elements} from './views/base.mjs';
 export const filters = {
