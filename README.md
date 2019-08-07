@@ -1,4 +1,4 @@
-# 🚧 (V3) Under Construction!🚧
+# 🚧 (V4) Under Construction!🚧
 # Broogle (Brew-gle)🍺
 
 ## A Single Page Application (SPA) that finds breweries in your state.😎
@@ -9,8 +9,9 @@
 * ~~The ability to 'like' and store beer breweries.~~ Done.✅
 * ~~Different search parameters you can search by.~~ Done. ✅
 * ~~Dark-mode~~ Done.✅
-* Mobile-friendly version
-* LocalStorage element validation
+* ~~Mobile-friendly version~~ Done.✅
+* ~~LocalStorage element validation~~ Done.✅
+*   Google Maps integration
 
 ## Powered by:
 * NodeJs
