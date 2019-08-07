@@ -11,7 +11,7 @@
 * ~~Dark-mode~~ Done.✅
 * ~~Mobile-friendly version~~ Done.✅
 * ~~LocalStorage element validation~~ Done.✅
-*   Google Maps integration
+*   ~~Google Maps integration~~ Done.✅
 
 ## Powered by:
 * NodeJs
