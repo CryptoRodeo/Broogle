@@ -21,6 +21,7 @@ export const ToggleFilter = () => {
             let filterType = filters[el.value].slice(3);
             toggleSearchInput(filterType);
             filters.current = filters[el.value];
+            alert("Filter applied, now searching by: " + filters.current);
         }
     });
     return getByFilter;
