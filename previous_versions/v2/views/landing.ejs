@@ -1,0 +1,54 @@
+<% include ./partials/header %>
+    <div id="landingContainer" class="container">
+        <nav id="navigation-bar">
+            <ul>
+                    <li id="aboutLink">About</li>
+                <li id="fav-heart"><i class="fas fa-heart"></i></li>
+                <i class="far fa-moon"></i>
+            </ul>
+        </nav>
+
+        <div class="overlay" id="aboutOverlay">
+            <div id="aboutContainer">
+                <h1 class="lightblue">Welcome to Broogle</h1>
+                <h3>Search for breweries in your area</h3>
+                <img src="./src/images/aboutimg.png"/>
+                <h4>Version 1.0</h4>
+                <a href="https://www.openbrewerydb.org/" class="lightblue">Powered by OpenBreweryDB</a>
+                <a href="https://www.github.com/cryptorodeo" class="lightblue">Built by Bryan Ramos</a>
+            </div>
+        </div>
+
+        <div id="likeOverlay">
+            <nav id="likedNav">
+                <h4 class="lightblue" id="closeLikePage">Go back</h4>
+            </nav>
+            <div id="likedContainer">
+                <div id="likedImgContainer">
+                    <img src="./src/images/liked.png"/>
+                    <h1>Saved Breweries</h1>
+                </div>
+                <ul id="likeList">
+                </ul>
+            </div>
+        </div>
+
+        <div id="search">
+            <div id="search-container">
+                <h1>Broogle</h1>
+                <form id="searchForm">
+                        <input type="text" id="search__field"placeholder="Type in your state to find breweries near you.">
+                        <button><i class="fas fa-search"></i></button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="resultsContainer" class="container">
+            <h1 >Results</h1>
+        <ul id="results-list">
+
+        </ul>
+    </div>  
+<% include ./partials/footer %>

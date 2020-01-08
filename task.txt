@@ -1,0 +1,11 @@
+- Refactor the selectors to use a BEM methodology.
+
+- Change the 'Dark Mode' descriptor to say Light Mode when dark mode is active
+
+- Find a way to save the users preference on light or dark mode so its automatically that when they use the app.
+
+- Validate all saved entries so theres no duplicates.
+    - Make a method for this
+- Fix/Improve the file structure.
+
+-Add error or no search results page

@@ -1,0 +1,90 @@
+@import 'colors.css';
+
+i.fas.fa-cogs:hover
+{
+    cursor: pointer;
+}
+
+
+i.fas.fa-cogs.exit:hover
+{
+    cursor: pointer;
+}
+
+i.fas.fa-cogs.exit
+{
+    z-index: 99999;
+}
+
+
+div.overlay#configOverlay
+{
+    position: fixed;
+    display: flex;
+    height: auto;
+    top: 0;
+    align-content: center;
+    justify-content: center;
+    display: none;
+}
+
+div.overlay#configOverlay.show
+{
+    display: flex;
+}
+
+#configContainer
+{
+    width: 50%;
+    height: 45%;
+    padding: 0;
+    flex-direction: row;
+    background-color: $whiteBackground;
+    z-index:10;
+}
+
+div#configContainer.--dark-mode
+{
+    color: $whiteText;
+    background-color: $darkBackground;
+}
+
+#configContainer h1
+{
+    font-size: 36px;
+}
+#filters
+{
+    width: auto;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#filters div
+{
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+#filters button
+{
+
+    margin: 0 auto;
+    height: 32px;
+    width: 64px;
+    background-color: $lightBlue;
+    font-size: 16px;
+    color: $whiteText;
+    border: none;
+    border-radius: 4px;
+}
+
+#filters button:hover
+{
+    cursor: pointer;
+}
+
+h2#dark-mode__header
+{
+    margin-top: 15px;
+}
