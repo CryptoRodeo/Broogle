@@ -48,7 +48,6 @@ app.use("/", indexRoute);
 app.listen(process.env.PORT || 3000, function(){
     console.log("Broogle is up and running");
 });
-=======
 app.listen(process.env.PORT || 8000, function(){
     console.log("App is running");
 });
