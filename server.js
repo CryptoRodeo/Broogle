@@ -45,7 +45,6 @@ app.use(corsMiddleware);
 app.use("/", indexRoute);
 
 //Go to port 3000 or the port set by heroku dynamically
-<<<<<<< HEAD
 app.listen(process.env.PORT || 3000, function(){
     console.log("Broogle is up and running");
 });
@@ -53,4 +52,3 @@ app.listen(process.env.PORT || 3000, function(){
 app.listen(process.env.PORT || 8000, function(){
     console.log("App is running");
 });
->>>>>>> 6ed224332795077fd8d21ba5c4a20adafb2fcd7e
