@@ -17,6 +17,5 @@
 * ES6
 * [OpenBreweryDB](https://www.openbrewerydb.org/)
 
-[Click here to check it out!](https://broogle.herokuapp.com/)
 
 
